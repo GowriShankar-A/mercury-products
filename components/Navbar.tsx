@@ -100,8 +100,8 @@ export default function Navbar() {
   return (
     <>
       <div
-        className="fixed left-0 right-0 z-50 flex justify-center"
-        style={{ top: "0px", transition: "opacity 0.6s cubic-bezier(0.22,1,0.36,1), transform 0.6s cubic-bezier(0.22,1,0.36,1)", opacity: mounted ? 1 : 0, transform: mounted ? "translate3d(0,0,0)" : "translate3d(0,-18px,0)", willChange: "transform, opacity" }}
+        className="fixed left-0 right-0 z-50 flex justify-center header-entrance"
+        style={{ top: "0px" }}
       >
         <div style={{ width: "100%" }}>
           {/* Full bleed sticky header */}

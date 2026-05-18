@@ -967,3 +967,19 @@ details.faq-item[open] { border-color: rgba(255,255,255,0.12); }
   transform: scale(1.2);
 }
 
+/* Navbar Entrance Animation to prevent hydration errors */
+.header-entrance {
+  animation: headerFadeIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  opacity: 0;
+  transform: translate3d(0, -18px, 0);
+  will-change: transform, opacity;
+}
+
+@keyframes headerFadeIn {
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+
