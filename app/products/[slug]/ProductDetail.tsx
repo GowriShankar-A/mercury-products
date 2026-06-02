@@ -64,13 +64,14 @@ export default function ProductDetail({ product, related }: Props) {
               ))}
             </div>
 
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px", marginBottom: "32px" }}>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))", gap: "10px", marginBottom: "32px" }}>
               {[
+                { label: "Price Guidance", value: product.price, highlight: true },
                 { label: "Turnaround", value: product.turnaround },
                 { label: "Min. Quantity", value: `${product.minQuantity} piece${product.minQuantity > 1 ? "s" : ""}` },
               ].map((s) => (
-                <div key={s.label} style={{ padding: "14px 16px", borderRadius: "14px", background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.07)" }}>
-                  <p style={{ fontSize: "11px", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.1em", color: "rgba(255,255,255,0.35)", margin: "0 0 4px 0" }}>{s.label}</p>
+                <div key={s.label} style={{ padding: "14px 16px", borderRadius: "14px", background: s.highlight ? `${accent}0c` : "rgba(255,255,255,0.04)", border: s.highlight ? `1px solid ${accent}40` : "1px solid rgba(255,255,255,0.07)" }}>
+                  <p style={{ fontSize: "11px", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.1em", color: s.highlight ? accent : "rgba(255,255,255,0.35)", margin: "0 0 4px 0" }}>{s.label}</p>
                   <p style={{ fontSize: "14px", fontWeight: 700, color: "#ffffff", margin: 0 }}>{s.value}</p>
                 </div>
               ))}
@@ -114,6 +115,10 @@ export default function ProductDetail({ product, related }: Props) {
           <div style={{ padding: "32px", borderRadius: "24px", background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.07)" }}>
             <h2 style={{ fontSize: "20px", fontWeight: 800, color: "#ffffff", letterSpacing: "-0.02em", margin: "0 0 20px 0" }}>Specifications</h2>
             <div style={{ display: "flex", flexDirection: "column" }}>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "11px 0", borderBottom: "1px solid rgba(255,255,255,0.06)", gap: "16px" }}>
+                <span style={{ fontSize: "13px", color: "rgba(255,255,255,0.4)", fontWeight: 500 }}>Price Guidance</span>
+                <span style={{ fontSize: "13px", color: accent, fontWeight: 700, textAlign: "right" }}>{product.price}</span>
+              </div>
               {product.specs.map((s, i) => (
                 <div key={s.label} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "11px 0", borderBottom: i < product.specs.length - 1 ? "1px solid rgba(255,255,255,0.06)" : "none", gap: "16px" }}>
                   <span style={{ fontSize: "13px", color: "rgba(255,255,255,0.4)", fontWeight: 500 }}>{s.label}</span>

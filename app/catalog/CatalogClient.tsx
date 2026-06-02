@@ -155,9 +155,12 @@ export default function CatalogClient() {
                     </div>
 
                     {/* Footer */}
-                    <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginTop: "20px" }}>
-                      <span style={{ fontSize: "12px", color: "rgba(255,255,255,0.28)", fontWeight: 500, letterSpacing: "0.04em", textTransform: "uppercase" }}>Custom pricing</span>
-                      <Link href={`/products/${p.slug}`} className="cat-details-link">
+                    <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginTop: "20px", gap: "16px" }}>
+                      <div>
+                        <p style={{ fontSize: "10px", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.05em", color: "rgba(255,255,255,0.35)", margin: "0 0 2px 0" }}>Price Guidance</p>
+                        <p style={{ fontSize: "13.5px", fontWeight: 700, color: "#ffffff", margin: 0 }}>{p.price}</p>
+                      </div>
+                      <Link href={`/products/${p.slug}`} className="cat-details-link" style={{ flexShrink: 0 }}>
                         View details <span className="cat-arrow">›</span>
                       </Link>
                     </div>

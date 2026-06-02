@@ -25,6 +25,7 @@ export interface Product {
   relatedSlugs: string[];
   badge?: string;
   badgeColor?: string;
+  price: string;
 }
 
 export const SITE_URL = "https://www.mercuryproducts.in";
@@ -106,6 +107,7 @@ export const products: Product[] = [
     relatedSlugs: ["foam-board-uv-direct", "acrylic-uv-print", "aluminium-standee"],
     badge: "POPULAR",
     badgeColor: "#f472b6",
+    price: "Rs. 18.50 per sq.ft",
   },
   {
     id: 2,
@@ -162,6 +164,7 @@ export const products: Product[] = [
     relatedSlugs: ["sunpack-uv-direct", "canvas-uv-print", "product-display-stand"],
     badge: "POPULAR",
     badgeColor: "#f472b6",
+    price: "Rs. 110 per sq.ft",
   },
   {
     id: 3,
@@ -218,6 +221,7 @@ export const products: Product[] = [
     relatedSlugs: ["sunpack-uv-direct", "one-way-vision", "foam-board-uv-direct"],
     badge: "BESTSELLER",
     badgeColor: "#4ade80",
+    price: "Rs. 15 per sq.ft",
   },
   {
     id: 4,
@@ -274,6 +278,7 @@ export const products: Product[] = [
     relatedSlugs: ["back-lit-flex", "one-way-vision", "aluminium-standee"],
     badge: "POPULAR",
     badgeColor: "#22d3ee",
+    price: "Rs. 10 per sq.ft (ordinary flex with solvent print)",
   },
   {
     id: 5,
@@ -327,6 +332,7 @@ export const products: Product[] = [
       { label: "Min. Order", value: "1 piece" },
     ],
     relatedSlugs: ["front-lit-flex", "one-way-vision", "aluminium-standee"],
+    price: "Rs. 275 per sq.ft (ordinary flex with solvent print)",
   },
   {
     id: 6,
@@ -381,6 +387,7 @@ export const products: Product[] = [
       { label: "Min. Order", value: "1 piece" },
     ],
     relatedSlugs: ["wood-uv-print", "glass-uv-print", "acrylic-uv-print"],
+    price: "Rs. 180 per sq.ft",
   },
   {
     id: 7,
@@ -435,6 +442,7 @@ export const products: Product[] = [
       { label: "Min. Order", value: "1 piece" },
     ],
     relatedSlugs: ["acrylic-uv-print", "wood-uv-print", "canvas-uv-print"],
+    price: "Rs. 180 per sq.ft",
   },
   {
     id: 8,
@@ -491,6 +499,7 @@ export const products: Product[] = [
     relatedSlugs: ["glass-uv-print", "sunpack-uv-direct", "aluminium-standee"],
     badge: "PREMIUM",
     badgeColor: "#818cf8",
+    price: "Rs. 210 per sq.ft",
   },
   {
     id: 9,
@@ -545,6 +554,7 @@ export const products: Product[] = [
       { label: "Min. Order", value: "1 piece" },
     ],
     relatedSlugs: ["vinyl-stickers", "front-lit-flex", "back-lit-flex"],
+    price: "Rs. 110 per sq.ft",
   },
   {
     id: 10,
@@ -599,6 +609,7 @@ export const products: Product[] = [
       { label: "Min. Order", value: "1 piece" },
     ],
     relatedSlugs: ["canvas-uv-print", "glass-uv-print", "acrylic-uv-print"],
+    price: "Rs. 220 per sq.ft",
   },
   {
     id: 11,
@@ -654,6 +665,7 @@ export const products: Product[] = [
     relatedSlugs: ["product-display-stand", "front-lit-flex", "sunpack-uv-direct"],
     badge: "NEW",
     badgeColor: "#818cf8",
+    price: "Rs. 1,400 per piece",
   },
   {
     id: 12,
@@ -707,6 +719,7 @@ export const products: Product[] = [
       { label: "Min. Order", value: "1 unit (enquiry basis)" },
     ],
     relatedSlugs: ["aluminium-standee", "sunpack-uv-direct", "acrylic-uv-print"],
+    price: "Affordable as per customization",
   },
   {
     id: 13,
@@ -760,6 +773,7 @@ export const products: Product[] = [
       { label: "Min. Order", value: "10 pieces" },
     ],
     relatedSlugs: ["sunpack-uv-direct", "foam-board-uv-direct", "product-display-stand"],
+    price: "Affordable as per customization",
   },
 ];
 

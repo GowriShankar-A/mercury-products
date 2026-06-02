@@ -140,63 +140,70 @@ export default function Navbar() {
             {/* Desktop nav */}
             <div className="hidden md:flex items-center" style={{ gap: "4px" }} ref={dropdownRef}>
 
-              {/* Products dropdown */}
-              <div onMouseEnter={() => openMenu("products")} onMouseLeave={scheduleClose} style={{ position: "relative" }}>
-                <button style={navItemStyle(pathname.startsWith("/products") || pathname === "/catalog")}
-                  onFocus={() => openMenu("products")} aria-expanded={openDropdown === "products"} aria-haspopup="true">
-                  <span style={{ padding: "4px 10px" }}>Products</span>
-                  <svg width="10" height="10" viewBox="0 0 10 10" fill="none" style={{ marginLeft: "-4px", opacity: 0.5, transition: "transform 0.2s", transform: openDropdown === "products" ? "rotate(180deg)" : "rotate(0)" }}>
+              {/* Products & Services dropdown */}
+              <div onMouseEnter={() => openMenu("products-services")} onMouseLeave={scheduleClose} style={{ position: "relative" }}>
+                <button style={navItemStyle(pathname.startsWith("/products") || pathname === "/catalog" || pathname === "/services")}
+                  onFocus={() => openMenu("products-services")} aria-expanded={openDropdown === "products-services"} aria-haspopup="true">
+                  <span style={{ padding: "4px 10px" }}>Products & Services</span>
+                  <svg width="10" height="10" viewBox="0 0 10 10" fill="none" style={{ marginLeft: "-4px", opacity: 0.5, transition: "transform 0.2s", transform: openDropdown === "products-services" ? "rotate(180deg)" : "rotate(0)" }}>
                     <path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
                   </svg>
                 </button>
 
-                {openDropdown === "products" && (
+                {openDropdown === "products-services" && (
                   <div onMouseEnter={cancelClose} onMouseLeave={scheduleClose}
-                    style={{ position: "absolute", top: "calc(100% + 16px)", left: "50%", transform: "translateX(-50%)", width: "640px", borderRadius: "24px", background: "rgba(var(--card-bg-rgb), 0.97)", backdropFilter: "blur(24px)", border: "1px solid var(--card-border)", boxShadow: "0 24px 64px rgba(0,0,0,0.18)", padding: "24px", animation: "dropdownIn 0.2s cubic-bezier(0.22,1,0.36,1)" }}>
-                    <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "24px" }}>
-                      {productGroups.map((group) => (
-                        <div key={group.label}>
-                          <p style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: group.color, margin: "0 0 10px 0" }}>{group.label}</p>
-                          <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
-                            {group.items.map((p) => (
-                              <Link key={p.slug} href={`/products/${p.slug}`} className="nav-link-hover" style={{ display: "flex", alignItems: "center", gap: "8px", padding: "7px 10px", borderRadius: "10px", textDecoration: "none", color: "var(--text-muted)", fontSize: "13px", fontWeight: 500 }}>
-                                <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: DOT_COLOR[p.category], flexShrink: 0 }} />
-                                {p.name}
-                              </Link>
-                            ))}
-                          </div>
+                    style={{ position: "absolute", top: "calc(100% + 16px)", left: "50%", transform: "translateX(-50%)", width: "820px", borderRadius: "24px", background: "rgba(var(--card-bg-rgb), 0.97)", backdropFilter: "blur(24px)", border: "1px solid var(--card-border)", boxShadow: "0 24px 64px rgba(0,0,0,0.18)", padding: "28px 24px 24px", animation: "dropdownIn 0.2s cubic-bezier(0.22,1,0.36,1)" }}>
+                    <div style={{ display: "grid", gridTemplateColumns: "1.1fr 2fr", gap: "32px" }}>
+                      {/* Services column */}
+                      <div style={{ borderRight: "1px solid var(--card-border)", paddingRight: "20px" }}>
+                        <Link href="/services" className="nav-text-hover" style={{ display: "inline-block", textDecoration: "none", fontSize: "10px", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--color-cyan)", margin: "0 0 14px 12px" }}>
+                          Printing Services →
+                        </Link>
+                        <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
+                          {serviceLinks.map((s) => (
+                            <Link key={s.href} href={s.href} className="nav-link-hover" style={{ display: "block", padding: "8px 12px", borderRadius: "10px", textDecoration: "none", color: "var(--text-muted)", fontSize: "13px", fontWeight: 500 }}>
+                              {s.label}
+                            </Link>
+                          ))}
                         </div>
-                      ))}
-                    </div>
-                    <div style={{ marginTop: "16px", paddingTop: "16px", borderTop: "1px solid var(--card-border)", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                      <Link href="/catalog" className="nav-text-hover" style={{ fontSize: "13px", fontWeight: 600, color: "var(--text-dim)", textDecoration: "none" }}>
-                        View all 13 products →
-                      </Link>
-                      <Link href="/quote" style={{ padding: "8px 16px", borderRadius: "9999px", background: "linear-gradient(135deg,#ec4899,#f97316)", color: "#ffffff", fontWeight: 700, fontSize: "12px", textDecoration: "none" }}>
-                        Get a Quote
-                      </Link>
-                    </div>
-                  </div>
-                )}
-              </div>
+                      </div>
 
-              {/* Services dropdown */}
-              <div onMouseEnter={() => openMenu("services")} onMouseLeave={scheduleClose} style={{ position: "relative" }}>
-                <button style={navItemStyle(pathname === "/services")} aria-expanded={openDropdown === "services"} aria-haspopup="true">
-                  <span style={{ padding: "4px 10px" }}>Services</span>
-                  <svg width="10" height="10" viewBox="0 0 10 10" fill="none" style={{ marginLeft: "-4px", opacity: 0.5, transition: "transform 0.2s", transform: openDropdown === "services" ? "rotate(180deg)" : "rotate(0)" }}>
-                    <path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
-                  </svg>
-                </button>
+                      {/* Products column */}
+                      <div>
+                        <Link href="/catalog" className="nav-text-hover" style={{ display: "inline-block", textDecoration: "none", fontSize: "10px", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--color-pink)", margin: "0 0 14px 0" }}>
+                          Product Catalog →
+                        </Link>
+                        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "24px" }}>
+                          {productGroups.map((group) => (
+                            <div key={group.label}>
+                              <p style={{ fontSize: "10.5px", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: group.color, margin: "0 0 8px 0" }}>{group.label}</p>
+                              <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
+                                {group.items.map((p) => (
+                                  <Link key={p.slug} href={`/products/${p.slug}`} className="nav-link-hover" style={{ display: "flex", alignItems: "center", gap: "8px", padding: "6px 8px", borderRadius: "8px", textDecoration: "none", color: "var(--text-muted)", fontSize: "12.5px", fontWeight: 500 }}>
+                                    <span style={{ width: "5px", height: "5px", borderRadius: "50%", background: DOT_COLOR[p.category], flexShrink: 0 }} />
+                                    {p.name}
+                                  </Link>
+                                ))}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
 
-                {openDropdown === "services" && (
-                  <div onMouseEnter={cancelClose} onMouseLeave={scheduleClose}
-                    style={{ position: "absolute", top: "calc(100% + 16px)", left: "50%", transform: "translateX(-50%)", width: "240px", borderRadius: "20px", background: "rgba(var(--card-bg-rgb), 0.97)", backdropFilter: "blur(24px)", border: "1px solid var(--card-border)", boxShadow: "0 24px 64px rgba(0,0,0,0.18)", padding: "12px", animation: "dropdownIn 0.2s cubic-bezier(0.22,1,0.36,1)" }}>
-                    {serviceLinks.map((s) => (
-                      <Link key={s.href} href={s.href} className="nav-link-hover" style={{ display: "block", padding: "9px 12px", borderRadius: "10px", fontSize: "13px", fontWeight: 500, color: "var(--text-muted)", textDecoration: "none" }}>
-                        {s.label}
-                      </Link>
-                    ))}
+                    <div style={{ marginTop: "24px", paddingTop: "20px", borderTop: "1px solid var(--card-border)", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                      <span style={{ fontSize: "12px", color: "var(--text-dim)", fontWeight: 500 }}>
+                        Can&apos;t find what you need? We do custom shapes, sizes, and templates.
+                      </span>
+                      <div style={{ display: "flex", gap: "12px", alignItems: "center" }}>
+                        <Link href="/catalog" className="nav-text-hover" style={{ fontSize: "13px", fontWeight: 600, color: "var(--text-primary)", textDecoration: "none" }}>
+                          View All Products →
+                        </Link>
+                        <Link href="/quote" style={{ padding: "8px 18px", borderRadius: "9999px", background: "linear-gradient(135deg,#ec4899,#f97316)", color: "#ffffff", fontWeight: 700, fontSize: "12px", textDecoration: "none" }}>
+                          Get a Quote
+                        </Link>
+                      </div>
+                    </div>
                   </div>
                 )}
               </div>
@@ -262,8 +269,7 @@ export default function Navbar() {
             style={{ marginTop: "10px", borderRadius: "24px", background: "rgba(17,17,25,0.95)", backdropFilter: "blur(18px)", WebkitBackdropFilter: "blur(18px)", border: "1px solid rgba(255,255,255,0.09)", boxShadow: "0 8px 32px rgba(0,0,0,0.4)", overflow: "hidden", transition: "max-height 0.35s cubic-bezier(0.22,1,0.36,1),opacity 0.3s ease", maxHeight: menuOpen ? "600px" : "0px", opacity: menuOpen ? 1 : 0 }}>
             <div style={{ padding: "20px 20px 24px" }}>
               {[
-                { label: "Products", href: "/catalog" },
-                { label: "Services", href: "/services" },
+                { label: "Products & Services", href: "/catalog" },
                 { label: "About", href: "/about" },
                 { label: "Blog", href: "/blog" },
                 { label: "FAQ", href: "/faq" },

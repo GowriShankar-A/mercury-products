@@ -317,6 +317,28 @@ export default function HomePage() {
                 </Link>
               ))}
             </div>
+
+            <div className="flex justify-center mt-12">
+              <Link
+                href="/catalog"
+                className="browse-products-btn"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "8px",
+                  padding: "15px 32px",
+                  borderRadius: "9999px",
+                  background: "rgba(var(--hover-bg-rgb), 0.07)",
+                  border: "1px solid var(--card-border)",
+                  color: "var(--text-muted)",
+                  fontWeight: 600,
+                  fontSize: "15px",
+                  textDecoration: "none",
+                }}
+              >
+                View All Products ↗
+              </Link>
+            </div>
           </div>
         </section>
       </Reveal>

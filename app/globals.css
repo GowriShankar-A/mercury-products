@@ -341,9 +341,13 @@ textarea {
 
 .browse-products-btn {
   transition: all 0.3s var(--ease-premium);
+  will-change: transform;
 }
 .browse-products-btn:hover {
   color: var(--text-primary) !important;
+  background: rgba(var(--hover-bg-rgb), 0.12) !important;
+  border-color: var(--card-border-hover) !important;
+  transform: translateY(-2px);
 }
 
 .footer-link {
