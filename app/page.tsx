@@ -25,10 +25,10 @@ const stats = [
 ];
 
 const featuredProducts = [
-  { category: "UV PRINT", badge: "POPULAR", badgeColor: "#f472b6", dotColor: "#f472b6", name: "Sunpack — UV Direct Print", tagline: "Bold outdoor signage with vivid, permanent colour.", href: "/products/sunpack-uv-direct", img: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=85" },
-  { category: "UV PRINT", badge: "PREMIUM", badgeColor: "#818cf8", dotColor: "#818cf8", name: "Acrylic with UV Print", tagline: "Premium clarity for signage, awards and display.", href: "/products/acrylic-uv-print", img: "https://images.unsplash.com/photo-1612538498456-e861df91d4d0?w=800&q=85" },
-  { category: "STICKERS", badge: "BESTSELLER", badgeColor: "#4ade80", dotColor: "#4ade80", name: "Vinyl Stickers", tagline: "Die-cut precision. Colours that outlast everything.", href: "/products/vinyl-stickers", img: "https://images.unsplash.com/photo-1572375992501-4b0892d50c69?w=800&q=85" },
-  { category: "FLEX", badge: "NEW", badgeColor: "#22d3ee", dotColor: "#22d3ee", name: "Front Lit Flex", tagline: "Maximum visibility for hoardings and signage.", href: "/products/front-lit-flex", img: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=85" },
+  { category: "UV PRINT", badge: "POPULAR", badgeColor: "#f472b6", dotColor: "#f472b6", name: "Sunpack — UV Direct Print", tagline: "Bold outdoor signage with vivid, permanent colour.", href: "/products/sunpack-uv-direct", img: "https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=800&q=85" },
+  { category: "UV PRINT", badge: "PREMIUM", badgeColor: "#818cf8", dotColor: "#818cf8", name: "Acrylic with UV Print", tagline: "Premium clarity for signage, awards and display.", href: "/products/acrylic-uv-print", img: "https://images.unsplash.com/photo-1628144501490-a714030678d4?w=800&q=85" },
+  { category: "STICKERS", badge: "BESTSELLER", badgeColor: "#4ade80", dotColor: "#4ade80", name: "Vinyl Stickers", tagline: "Die-cut precision. Colours that outlast everything.", href: "/products/vinyl-stickers", img: "https://images.unsplash.com/photo-1603252109303-2751441dd157?w=800&q=85" },
+  { category: "FLEX", badge: "NEW", badgeColor: "#22d3ee", dotColor: "#22d3ee", name: "Front Lit Flex", tagline: "Maximum visibility for hoardings and signage.", href: "/products/front-lit-flex", img: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&q=85" },
 ];
 
 const possibilitiesProducts = [
@@ -41,7 +41,7 @@ const possibilitiesProducts = [
     name: "Front Lit Flex",
     tagline: "Maximum visibility for hoardings and signage.",
     price: "Rs. 10/sqft",
-    img: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=900&q=90",
+    img: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=900&q=90",
   },
   {
     category: "STICKERS",
@@ -52,7 +52,7 @@ const possibilitiesProducts = [
     name: "Vinyl Stickers",
     tagline: "Die-cut precision. Colours that outlast everything.",
     price: "Rs. 15/sqft",
-    img: "https://images.unsplash.com/photo-1572375992501-4b0892d50c69?w=900&q=90",
+    img: "https://images.unsplash.com/photo-1603252109303-2751441dd157?w=900&q=90",
   },
   {
     category: "UV PRINT",
@@ -63,7 +63,7 @@ const possibilitiesProducts = [
     name: "Sunpack — UV Direct Print",
     tagline: "Bold outdoor signage with permanent colour.",
     price: "Rs. 18.50/sqft",
-    img: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=90",
+    img: "https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=900&q=90",
   },
 ];
 

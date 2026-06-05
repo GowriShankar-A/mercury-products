@@ -85,11 +85,11 @@ export const products: Product[] = [
     turnaround: "3–5 business days",
     minQuantity: 1,
     tags: ["UV DIRECT", "OUTDOOR", "RIGID", "FULL COLOUR", "WEATHER PROOF"],
-    img: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=85",
+    img: "https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=900&q=85",
     gallery: [
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
-      "https://images.unsplash.com/photo-1586339949916-3e9457bef6d3?w=800&q=80",
-      "https://images.unsplash.com/photo-1612538498456-e861df91d4d0?w=800&q=80",
+      "https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=800&q=80",
+      "https://images.unsplash.com/photo-1572945281702-86bbad27050a?w=800&q=80",
+      "https://images.unsplash.com/photo-1582139329536-e7284fece509?w=800&q=80",
     ],
     faqs: [
       { q: "What is Sunpack?", a: "Sunpack is a lightweight, rigid expanded PVC sheet available in 3mm, 5mm, and 8mm thicknesses. It is the most widely used substrate for signage and display printing in India." },
@@ -143,11 +143,11 @@ export const products: Product[] = [
     turnaround: "2–4 business days",
     minQuantity: 1,
     tags: ["UV DIRECT", "INDOOR", "LIGHTWEIGHT", "EXHIBITION", "RETAIL"],
-    img: "https://images.unsplash.com/photo-1586339949916-3e9457bef6d3?w=900&q=85",
+    img: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=900&q=85",
     gallery: [
-      "https://images.unsplash.com/photo-1586339949916-3e9457bef6d3?w=800&q=80",
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
-      "https://images.unsplash.com/photo-1612538498456-e861df91d4d0?w=800&q=80",
+      "https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=800&q=80",
+      "https://images.unsplash.com/photo-1547891654-e66ed7edd96c?w=800&q=80",
+      "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&q=80",
     ],
     faqs: [
       { q: "What is foam board?", a: "Foam board (also called foam core) is a lightweight sheet with a polystyrene foam core sandwiched between two smooth paper or plastic facings. It provides excellent rigidity relative to its weight." },
@@ -200,11 +200,11 @@ export const products: Product[] = [
     turnaround: "2–3 business days",
     minQuantity: 10,
     tags: ["DIE-CUT", "GLOSSY", "MATTE", "WATERPROOF", "OUTDOOR"],
-    img: "https://images.unsplash.com/photo-1572375992501-4b0892d50c69?w=900&q=85",
+    img: "https://images.unsplash.com/photo-1603252109303-2751441dd157?w=900&q=85",
     gallery: [
+      "https://images.unsplash.com/photo-1603252109303-2751441dd157?w=800&q=80",
+      "https://images.unsplash.com/photo-1589384267710-7a259678a59a?w=800&q=80",
       "https://images.unsplash.com/photo-1572375992501-4b0892d50c69?w=800&q=80",
-      "https://images.unsplash.com/photo-1612538498456-e861df91d4d0?w=800&q=80",
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
     ],
     faqs: [
       { q: "How long do vinyl stickers last outdoors?", a: "With gloss or matte laminate, our cast vinyl stickers are rated 5+ years outdoors under normal UV and weather conditions." },
@@ -257,10 +257,10 @@ export const products: Product[] = [
     turnaround: "2–4 business days",
     minQuantity: 1,
     tags: ["FRONT-LIT", "OUTDOOR", "LARGE FORMAT", "HOARDING", "UV STABLE"],
-    img: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=900&q=85",
+    img: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=900&q=85",
     gallery: [
+      "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&q=80",
       "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80",
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
       "https://images.unsplash.com/photo-1569144157591-c60f3f82f362?w=800&q=80",
     ],
     faqs: [
@@ -313,11 +313,11 @@ export const products: Product[] = [
     turnaround: "3–5 business days",
     minQuantity: 1,
     tags: ["BACK-LIT", "LIGHTBOX", "TRANSLUCENT", "LED", "LARGE FORMAT"],
-    img: "https://images.unsplash.com/photo-1535016120720-40c646be5580?w=900&q=85",
+    img: "https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=900&q=85",
     gallery: [
+      "https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=800&q=80",
+      "https://images.unsplash.com/photo-1506157786151-b8491531f063?w=800&q=80",
       "https://images.unsplash.com/photo-1535016120720-40c646be5580?w=800&q=80",
-      "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80",
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
     ],
     faqs: [
       { q: "What is the difference between front-lit and back-lit flex?", a: "Front-lit flex has an opaque white base for use with light shining onto the banner from the front. Back-lit flex is semi-translucent for use in lightboxes where light shines through from behind." },
@@ -368,11 +368,11 @@ export const products: Product[] = [
     turnaround: "4–6 business days",
     minQuantity: 1,
     tags: ["UV DIRECT", "CANVAS", "GALLERY", "INTERIOR", "FINE ART"],
-    img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=900&q=85",
+    img: "https://images.unsplash.com/photo-1580136579312-94651dfd596d?w=900&q=85",
     gallery: [
+      "https://images.unsplash.com/photo-1580136579312-94651dfd596d?w=800&q=80",
+      "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=800&q=80",
       "https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=800&q=80",
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
-      "https://images.unsplash.com/photo-1612538498456-e861df91d4d0?w=800&q=80",
     ],
     faqs: [
       { q: "Can I supply my own artwork?", a: "Yes — we accept high-resolution files at minimum 150 dpi at final print size. We'll provide a digital proof before printing." },
@@ -423,11 +423,11 @@ export const products: Product[] = [
     turnaround: "5–7 business days",
     minQuantity: 1,
     tags: ["UV DIRECT", "GLASS", "ARCHITECTURAL", "INTERIOR", "DECORATIVE"],
-    img: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=900&q=85",
+    img: "https://images.unsplash.com/photo-1533158307587-828f0a95017e?w=900&q=85",
     gallery: [
+      "https://images.unsplash.com/photo-1533158307587-828f0a95017e?w=800&q=80",
+      "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=800&q=80",
       "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800&q=80",
-      "https://images.unsplash.com/photo-1612538498456-e861df91d4d0?w=800&q=80",
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
     ],
     faqs: [
       { q: "Can you print on tempered glass?", a: "Yes — we print on pre-tempered glass panels. Note: glass cannot be cut or tempered after UV printing, so dimensions must be finalised before production." },
@@ -478,11 +478,11 @@ export const products: Product[] = [
     turnaround: "3–5 business days",
     minQuantity: 1,
     tags: ["UV DIRECT", "ACRYLIC", "PREMIUM SIGNAGE", "AWARDS", "RETAIL"],
-    img: "https://images.unsplash.com/photo-1612538498456-e861df91d4d0?w=900&q=85",
+    img: "https://images.unsplash.com/photo-1628144501490-a714030678d4?w=900&q=85",
     gallery: [
+      "https://images.unsplash.com/photo-1628144501490-a714030678d4?w=800&q=80",
+      "https://images.unsplash.com/photo-1616628188859-7a11abb6fcc9?w=800&q=80",
       "https://images.unsplash.com/photo-1612538498456-e861df91d4d0?w=800&q=80",
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
-      "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800&q=80",
     ],
     faqs: [
       { q: "What is the difference between cast and extruded acrylic?", a: "Cast acrylic has tighter tolerances, better optical clarity, and higher chemical resistance than extruded acrylic. We use cast acrylic as standard for UV printing for best results." },
@@ -535,11 +535,11 @@ export const products: Product[] = [
     turnaround: "3–4 business days",
     minQuantity: 1,
     tags: ["PERFORATED", "WINDOW VINYL", "SEE-THROUGH", "VEHICLE WRAP", "RETAIL"],
-    img: "https://images.unsplash.com/photo-1557200134-90327ee9fafa?w=900&q=85",
+    img: "https://images.unsplash.com/photo-1570125909232-eb263c188f7e?w=900&q=85",
     gallery: [
+      "https://images.unsplash.com/photo-1570125909232-eb263c188f7e?w=800&q=80",
+      "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&q=80",
       "https://images.unsplash.com/photo-1557200134-90327ee9fafa?w=800&q=80",
-      "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80",
-      "https://images.unsplash.com/photo-1572375992501-4b0892d50c69?w=800&q=80",
     ],
     faqs: [
       { q: "How much visibility is maintained from inside?", a: "In 50/50 OWV, 50% of the surface is perforated, providing reasonable inside visibility. In bright daylight, the graphic appears fully opaque from outside while the interior view is partially maintained." },
@@ -590,11 +590,11 @@ export const products: Product[] = [
     turnaround: "4–6 business days",
     minQuantity: 1,
     tags: ["UV DIRECT", "WOOD", "NATURAL", "INTERIOR DÉCOR", "LUXURY"],
-    img: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=900&q=85",
+    img: "https://images.unsplash.com/photo-1533090161767-e6ffed986c88?w=900&q=85",
     gallery: [
+      "https://images.unsplash.com/photo-1533090161767-e6ffed986c88?w=800&q=80",
+      "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800&q=80",
       "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&q=80",
-      "https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=800&q=80",
-      "https://images.unsplash.com/photo-1612538498456-e861df91d4d0?w=800&q=80",
     ],
     faqs: [
       { q: "Which wood types can be printed on?", a: "We print on MDF, birch plywood, pine, oak, and bamboo panels. Oily or resinous woods (teak, cedar) may require a special primer — ask us before ordering." },
@@ -644,11 +644,11 @@ export const products: Product[] = [
     turnaround: "5–7 business days",
     minQuantity: 1,
     tags: ["ALUMINIUM", "DISPLAY", "PORTABLE", "EVENT", "RETAIL"],
-    img: "https://images.unsplash.com/photo-1603969409447-ba86143a03f6?w=900&q=85",
+    img: "https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=900&q=85",
     gallery: [
+      "https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=800&q=80",
+      "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80",
       "https://images.unsplash.com/photo-1603969409447-ba86143a03f6?w=800&q=80",
-      "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80",
-      "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&q=80",
     ],
     faqs: [
       { q: "Can I order replacement graphics without a new frame?", a: "Yes — replacement graphic panels are available separately. Just specify your standee model and graphic size when ordering." },
@@ -700,11 +700,11 @@ export const products: Product[] = [
     turnaround: "7–10 business days",
     minQuantity: 1,
     tags: ["RETAIL", "CUSTOM", "BRANDED", "FLOOR STANDING", "MERCHANDISING"],
-    img: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=900&q=85",
+    img: "https://images.unsplash.com/photo-1581557991964-125469da3b8a?w=900&q=85",
     gallery: [
+      "https://images.unsplash.com/photo-1581557991964-125469da3b8a?w=800&q=80",
       "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&q=80",
       "https://images.unsplash.com/photo-1603969409447-ba86143a03f6?w=800&q=80",
-      "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80",
     ],
     faqs: [
       { q: "Do you handle the full design process?", a: "Yes — our structural design team will work with you from concept to production, including technical drawings, 3D renderings, and prototype approval." },
@@ -754,11 +754,11 @@ export const products: Product[] = [
     turnaround: "5–8 business days",
     minQuantity: 10,
     tags: ["5MM", "INDUSTRIAL", "RIGID PACKAGING", "MOISTURE PROOF", "CUSTOM SIZE"],
-    img: "https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?w=900&q=85",
+    img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=900&q=85",
     gallery: [
+      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&q=80",
+      "https://images.unsplash.com/photo-1595079676339-1534801ad6cf?w=800&q=80",
       "https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?w=800&q=80",
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
-      "https://images.unsplash.com/photo-1586339949916-3e9457bef6d3?w=800&q=80",
     ],
     faqs: [
       { q: "What makes sunpack better than cardboard for industrial trays?", a: "Sunpack PVC is waterproof, does not degrade when wet, resists most chemicals, and is reusable many times over. Cardboard loses structural integrity when moist and cannot be sanitised effectively." },

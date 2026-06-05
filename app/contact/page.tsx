@@ -2,14 +2,31 @@
 import { useState } from "react";
 import Reveal from "@/components/Reveal";
 import { COMPANY_EMAIL, COMPANY_PHONE, COMPANY_PHONE_ALT, COMPANY_ADDRESS, COMPANY_INSTAGRAM, COMPANY_FACEBOOK } from "@/lib/products";
+import { sendContactEmail } from "@/app/actions";
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const [form, setForm] = useState({ name: "", email: "", message: "" });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setSubmitting(true);
+    setError(null);
+    try {
+      const result = await sendContactEmail(form);
+      if (result.success) {
+        setSubmitted(true);
+      } else {
+        setError(result.error || "Failed to send message. Please check configuration.");
+      }
+    } catch (err) {
+      setError("An unexpected error occurred. Please try again.");
+      console.error(err);
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const inputStyle = {
@@ -139,9 +156,24 @@ export default function ContactPage() {
                       onFocus={(e) => (e.target.style.borderColor = "rgba(255,255,255,0.3)")}
                       onBlur={(e) => (e.target.style.borderColor = "rgba(255,255,255,0.1)")} />
                   </div>
+                  {error && (
+                    <div style={{
+                      color: "#FF4F79",
+                      fontSize: "14px",
+                      fontWeight: 500,
+                      padding: "12px 16px",
+                      background: "rgba(255, 79, 121, 0.08)",
+                      borderRadius: "14px",
+                      border: "1px solid rgba(255, 79, 121, 0.2)",
+                      lineHeight: 1.5
+                    }}>
+                      {error}
+                    </div>
+                  )}
                   <button type="submit"
-                    className="gradient-btn flex items-center justify-center gap-2 text-sm font-semibold px-6 py-4 rounded-full text-white mt-1">
-                    Send message →
+                    disabled={submitting}
+                    className="gradient-btn flex items-center justify-center gap-2 text-sm font-semibold px-6 py-4 rounded-full text-white mt-1 disabled:opacity-50 disabled:cursor-not-allowed">
+                    {submitting ? "Sending..." : "Send message →"}
                   </button>
                 </form>
               )}

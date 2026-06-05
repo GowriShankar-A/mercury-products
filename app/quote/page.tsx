@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Reveal from "@/components/Reveal";
+import { sendQuoteEmail } from "@/app/actions";
 
 const QUOTE_GRADIENT = "linear-gradient(90deg, #22D8FF 0%, #6D6EFF 38%, #D94EFF 70%, #FF9A28 100%)";
 
@@ -51,6 +52,8 @@ function CheckIcon() {
 
 export default function QuotePage() {
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const [focused, setFocused] = useState<string | null>(null);
   const [hoveredBtn, setHoveredBtn] = useState(false);
   const [form, setForm] = useState({
@@ -59,6 +62,25 @@ export default function QuotePage() {
     email: "",
     message: "",
   });
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setSubmitting(true);
+    setError(null);
+    try {
+      const result = await sendQuoteEmail(form);
+      if (result.success) {
+        setSubmitted(true);
+      } else {
+        setError(result.error || "Failed to send quote request. Please check configuration.");
+      }
+    } catch (err) {
+      setError("An unexpected error occurred. Please try again.");
+      console.error(err);
+    } finally {
+      setSubmitting(false);
+    }
+  };
 
   const set = (k: string) => (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
@@ -257,7 +279,7 @@ export default function QuotePage() {
               </p>
             </div>
           ) : (
-            <form onSubmit={(e) => { e.preventDefault(); setSubmitted(true); }} style={{ display: "flex", flexDirection: "column", gap: "18px" }}>
+            <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "18px" }}>
               {/* Row: Name */}
               <div>
                 <label style={labelStyle}>Your Name</label>
@@ -306,6 +328,20 @@ export default function QuotePage() {
                   onFocus={() => setFocused("details")} onBlur={() => setFocused(null)}
                 />
               </div>
+              {error && (
+                <div style={{
+                  color: "#FF4F79",
+                  fontSize: "14px",
+                  fontWeight: 500,
+                  padding: "12px 16px",
+                  background: "rgba(255, 79, 121, 0.08)",
+                  borderRadius: "14px",
+                  border: "1px solid rgba(255, 79, 121, 0.2)",
+                  lineHeight: 1.5
+                }}>
+                  {error}
+                </div>
+              )}
               {/* Footer: terms + CTA */}
               <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "16px", flexWrap: "wrap", marginTop: "4px" }}>
                 <p style={{ fontSize: "13px", color: "rgba(255,255,255,0.35)", margin: 0 }}>
@@ -313,6 +349,7 @@ export default function QuotePage() {
                 </p>
                 <button
                   type="submit"
+                  disabled={submitting}
                   onMouseEnter={() => setHoveredBtn(true)}
                   onMouseLeave={() => setHoveredBtn(false)}
                   style={{
@@ -321,20 +358,20 @@ export default function QuotePage() {
                     gap: "8px",
                     padding: "15px 32px",
                     borderRadius: "9999px",
-                    background: "linear-gradient(90deg, #FF4FD8, #FF5AA5)",
-                    color: "#ffffff",
+                    background: submitting ? "rgba(255,255,255,0.1)" : "linear-gradient(90deg, #FF4FD8, #FF5AA5)",
+                    color: submitting ? "rgba(255,255,255,0.4)" : "#ffffff",
                     fontWeight: 700,
                     fontSize: "15px",
                     letterSpacing: "0.01em",
                     border: "none",
-                    cursor: "pointer",
+                    cursor: submitting ? "default" : "pointer",
                     whiteSpace: "nowrap",
                     transition: "transform 0.25s cubic-bezier(0.22,1,0.36,1), box-shadow 0.25s ease",
-                    transform: hoveredBtn ? "translateY(-2px) scale(1.03)" : "none",
-                    boxShadow: hoveredBtn ? "0 0 40px rgba(255,90,180,0.65), 0 8px 20px rgba(0,0,0,0.3)" : "0 0 24px rgba(255,90,180,0.38)",
+                    transform: hoveredBtn && !submitting ? "translateY(-2px) scale(1.03)" : "none",
+                    boxShadow: submitting ? "none" : (hoveredBtn ? "0 0 40px rgba(255,90,180,0.65), 0 8px 20px rgba(0,0,0,0.3)" : "0 0 24px rgba(255,90,180,0.38)"),
                   }}
                 >
-                  Send request →
+                  {submitting ? "Sending..." : "Send request →"}
                 </button>
               </div>
             </form>
