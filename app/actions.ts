@@ -9,7 +9,7 @@ const SMTP_CONFIG = {
   user: process.env.SMTP_USER || "gowrishankara003@gmail.com",
   pass: process.env.SMTP_PASS || "nfky xhjb pjfw wifn",
   from: process.env.SMTP_FROM || '"Mercury Products" <gowrishankara003@gmail.com>',
-  to: process.env.SMTP_TO || "gowrishankargem@gmail.com",
+  to: process.env.SMTP_TO || "mercuryproducts@gmail.com",
 };
 
 interface QuoteInput {
@@ -39,9 +39,9 @@ export async function sendQuoteEmail(data: QuoteInput) {
   // Handle case where SMTP is not configured
   if (!host || !user || !pass) {
     console.warn("SMTP credentials are not configured. Email could not be sent.");
-    return { 
-      success: false, 
-      error: "SMTP configuration is incomplete." 
+    return {
+      success: false,
+      error: "SMTP configuration is incomplete."
     };
   }
 
@@ -136,9 +136,9 @@ export async function sendContactEmail(data: ContactInput) {
   // Handle case where SMTP is not configured
   if (!host || !user || !pass) {
     console.warn("SMTP credentials are not configured. Email could not be sent.");
-    return { 
-      success: false, 
-      error: "SMTP configuration is incomplete." 
+    return {
+      success: false,
+      error: "SMTP configuration is incomplete."
     };
   }
 
