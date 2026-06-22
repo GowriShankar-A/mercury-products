@@ -17,6 +17,7 @@ export async function submitReviewAction(formData: FormData) {
   try {
     await submitReview({ name, rating, message });
     revalidatePath("/reviews");
+    revalidatePath("/testimonials");
     return { success: true };
   } catch {
     return { success: false, error: "Failed to submit. Please try again." };
@@ -27,6 +28,7 @@ export async function approveReviewAction(id: string, secret: string) {
   if (secret !== process.env.ADMIN_SECRET) return { success: false, error: "Unauthorized" };
   await approveReview(id);
   revalidatePath("/reviews");
+  revalidatePath("/testimonials");
   return { success: true };
 }
 
@@ -34,5 +36,6 @@ export async function deleteReviewAction(id: string, secret: string) {
   if (secret !== process.env.ADMIN_SECRET) return { success: false, error: "Unauthorized" };
   await deleteReview(id);
   revalidatePath("/reviews");
+  revalidatePath("/testimonials");
   return { success: true };
 }

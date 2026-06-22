@@ -21,9 +21,11 @@ export async function POST(req: NextRequest) {
   if (action === "approve") {
     await approveReview(id);
     revalidatePath("/reviews");
+    revalidatePath("/testimonials");
   } else if (action === "delete") {
     await deleteReview(id);
     revalidatePath("/reviews");
+    revalidatePath("/testimonials");
   } else {
     return NextResponse.json({ error: "Unknown action" }, { status: 400 });
   }
