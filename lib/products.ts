@@ -368,10 +368,9 @@ export const products: Product[] = [
     turnaround: "4–6 business days",
     minQuantity: 1,
     tags: ["UV DIRECT", "CANVAS", "GALLERY", "INTERIOR", "FINE ART"],
-    img: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=900&q=85",
+    img: "/products/wood-uv-print.jpeg",
     gallery: [
-      "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=800&q=80",
-      "https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=800&q=80",
+      "/products/wood-uv-print.jpeg",
     ],
     faqs: [
       { q: "Can I supply my own artwork?", a: "Yes — we accept high-resolution files at minimum 150 dpi at final print size. We'll provide a digital proof before printing." },
@@ -636,11 +635,10 @@ export const products: Product[] = [
     turnaround: "5–7 business days",
     minQuantity: 1,
     tags: ["ALUMINIUM", "DISPLAY", "PORTABLE", "EVENT", "RETAIL"],
-    img: "https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=900&q=85",
+    img: "/products/front-lit-flex.webp",
     gallery: [
-      "https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=800&q=80",
-      "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80",
-      "https://images.unsplash.com/photo-1603969409447-ba86143a03f6?w=800&q=80",
+      "/products/front-lit-flex.webp",
+      "/products/back-lit-flex.jpeg",
     ],
     faqs: [
       { q: "Can I order replacement graphics without a new frame?", a: "Yes — replacement graphic panels are available separately. Just specify your standee model and graphic size when ordering." },
@@ -692,11 +690,10 @@ export const products: Product[] = [
     turnaround: "7–10 business days",
     minQuantity: 1,
     tags: ["RETAIL", "CUSTOM", "BRANDED", "FLOOR STANDING", "MERCHANDISING"],
-    img: "https://images.unsplash.com/photo-1581557991964-125469da3b8a?w=900&q=85",
+    img: "/products/foam-board-uv-direct.jpeg",
     gallery: [
-      "https://images.unsplash.com/photo-1581557991964-125469da3b8a?w=800&q=80",
-      "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&q=80",
-      "https://images.unsplash.com/photo-1603969409447-ba86143a03f6?w=800&q=80",
+      "/products/foam-board-uv-direct.jpeg",
+      "/products/foam-board-uv-direct-2.jpeg",
     ],
     faqs: [
       { q: "Do you handle the full design process?", a: "Yes — our structural design team will work with you from concept to production, including technical drawings, 3D renderings, and prototype approval." },
@@ -746,11 +743,10 @@ export const products: Product[] = [
     turnaround: "5–8 business days",
     minQuantity: 10,
     tags: ["5MM", "INDUSTRIAL", "RIGID PACKAGING", "MOISTURE PROOF", "CUSTOM SIZE"],
-    img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=900&q=85",
+    img: "/products/sunpack-uv-direct.webp",
     gallery: [
-      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&q=80",
-      "https://images.unsplash.com/photo-1595079676339-1534801ad6cf?w=800&q=80",
-      "https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?w=800&q=80",
+      "/products/sunpack-uv-direct.webp",
+      "/products/sunpack-uv-direct-2.jpeg",
     ],
     faqs: [
       { q: "What makes sunpack better than cardboard for industrial trays?", a: "Sunpack PVC is waterproof, does not degrade when wet, resists most chemicals, and is reusable many times over. Cardboard loses structural integrity when moist and cannot be sanitised effectively." },

@@ -5,13 +5,6 @@ const team = [
   { name: "Murali S", role: "Founder", img: "/founder.jpeg" },
 ];
 
-const galleryImgs = [
-  "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80",
-  "https://images.unsplash.com/photo-1572375992501-4b0892d50c69?w=600&q=80",
-  "https://images.unsplash.com/photo-1612538498456-e861df91d4d0?w=600&q=80",
-  "https://images.unsplash.com/photo-1600857544200-b2f666a9a2ec?w=600&q=80",
-];
-
 const values = [
   { icon: "⊙", title: "Color obsession", desc: "We calibrate our Komori presses daily and maintain the industry's widest Pantone coverage — 99% of all solid colors." },
   { icon: "✦", title: "Paper first", desc: "Before any job runs, we test the paper's coating, grain direction, and moisture content. Stock quality is non-negotiable." },
@@ -64,22 +57,6 @@ export default function AboutPage() {
                 <p className="text-xs uppercase tracking-widest text-white/35 mb-1">CERTIFIED</p>
                 <p className="font-bold text-white">FSC · ISO 9001</p>
               </div>
-            </div>
-          </div>
-        </section>
-      </Reveal>
-
-      {/* Gallery */}
-      <Reveal delayMs={80}>
-        <section className="px-6 md:px-10 mb-20">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-              {galleryImgs.map((img, i) => (
-                <div key={i} className={`rounded-2xl overflow-hidden ${i === 0 ? "md:col-span-2 md:row-span-2" : ""}`}
-                  style={{ aspectRatio: i === 0 ? "1/1" : "1/1" }}>
-                  <img src={img} alt="" loading="lazy" decoding="async" className="w-full h-full object-cover" />
-                </div>
-              ))}
             </div>
           </div>
         </section>
