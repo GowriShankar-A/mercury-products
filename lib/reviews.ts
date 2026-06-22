@@ -23,10 +23,10 @@ export async function submitReview(data: Omit<Review, "id" | "createdAt" | "stat
     ...data,
     id,
     createdAt: new Date().toISOString(),
-    status: "pending",
+    status: "approved",
   };
   await redis.hset(`review:${id}`, review as any);
-  await redis.lpush("reviews:pending", id);
+  await redis.lpush("reviews:approved", id);
   return { success: true };
 }
 
