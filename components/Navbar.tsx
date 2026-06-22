@@ -211,6 +211,7 @@ export default function Navbar() {
               {/* Static links */}
               {[
                 { label: "About", href: "/about" },
+                { label: "Reviews", href: "/reviews" },
                 { label: "Contact", href: "/contact" },
               ].map((l) => (
                 <Link key={l.href} href={l.href} className="nav-text-hover" style={{ ...navItemStyle(pathname === l.href), padding: "4px 10px" }}>

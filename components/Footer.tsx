@@ -25,6 +25,7 @@ const serviceLinks = [
 
 const companyLinks = [
   { label: "About Us", href: "/about" },
+  { label: "Reviews", href: "/reviews" },
   { label: "Contact", href: "/contact" },
   { label: "Get a Quote", href: "/quote" },
   { label: "Privacy Policy", href: "/privacy" },
