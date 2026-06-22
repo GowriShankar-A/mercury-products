@@ -54,7 +54,21 @@ export async function sendQuoteEmail(data: QuoteInput) {
         user,
         pass,
       },
+      connectionTimeout: 10000,
+      greetingTimeout: 10000,
+      socketTimeout: 10000,
     });
+
+    console.log("SMTP Config:", {
+      host,
+      port,
+      secure,
+      user,
+      passExists: !!pass,
+    });
+
+    await transporter.verify();
+    console.log("SMTP verified successfully");
 
     const htmlContent = `
       <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding: 30px; color: #222; max-width: 600px; border: 1px solid #eaeaea; border-radius: 16px; background-color: #ffffff;">
@@ -151,7 +165,21 @@ export async function sendContactEmail(data: ContactInput) {
         user,
         pass,
       },
+      connectionTimeout: 10000,
+      greetingTimeout: 10000,
+      socketTimeout: 10000,
     });
+
+    console.log("SMTP Config:", {
+      host,
+      port,
+      secure,
+      user,
+      passExists: !!pass,
+    });
+
+    await transporter.verify();
+    console.log("SMTP verified successfully");
 
     const htmlContent = `
       <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding: 30px; color: #222; max-width: 600px; border: 1px solid #eaeaea; border-radius: 16px; background-color: #ffffff;">
