@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CookieConsent from "@/components/CookieConsent";
 import StickyQuoteCTA from "@/components/StickyQuoteCTA";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import { SITE_URL, COMPANY_NAME } from "@/lib/products";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-geist-sans" });
@@ -131,6 +132,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         </div>
         <CookieConsent />
         <StickyQuoteCTA />
+        <WhatsAppButton />
       </body>
     </html>
   );

@@ -34,6 +34,7 @@ export const COMPANY_LOGO = "GST NO 33AFDPM2959L";
 export const COMPANY_EMAIL = "mercuryproducts@gmail.com";
 export const COMPANY_PHONE = "+91 98422 15503";
 export const COMPANY_PHONE_ALT = "+91 98422 93337";
+export const COMPANY_PHONE_ALT2 = "+91 99444 11366";
 export const COMPANY_ADDRESS = `Mercury Products,
 No. 6/13 Swamy das st,
 Srinivasa nagar,
@@ -90,10 +91,9 @@ export const products: Product[] = [
     turnaround: "3–5 business days",
     minQuantity: 1,
     tags: ["UV DIRECT", "OUTDOOR", "RIGID", "FULL COLOUR", "WEATHER PROOF"],
-    img: "/products/sunpack-uv-direct.webp",
+    img: "/products/sunpack-uv-direct-main.jpeg",
     gallery: [
-      "/products/sunpack-uv-direct.webp",
-      "/products/sunpack-uv-direct-2.jpeg",
+      "/products/sunpack-uv-direct-2.webp",
     ],
     faqs: [
       { q: "What is Sunpack?", a: "Sunpack is a lightweight, rigid expanded PVC sheet available in 3mm, 5mm, and 8mm thicknesses. It is the most widely used substrate for signage and display printing in India." },
@@ -147,10 +147,10 @@ export const products: Product[] = [
     turnaround: "2–4 business days",
     minQuantity: 1,
     tags: ["UV DIRECT", "INDOOR", "LIGHTWEIGHT", "EXHIBITION", "RETAIL"],
-    img: "/products/foam-board-uv-direct.jpeg",
+    img: "/products/foam-board-uv-direct-main.jpeg",
     gallery: [
+      "/products/foam-board-uv-direct-3.jpeg",
       "/products/foam-board-uv-direct.jpeg",
-      "/products/foam-board-uv-direct-2.jpeg",
     ],
     faqs: [
       { q: "What is foam board?", a: "Foam board (also called foam core) is a lightweight sheet with a polystyrene foam core sandwiched between two smooth paper or plastic facings. It provides excellent rigidity relative to its weight." },
@@ -203,10 +203,10 @@ export const products: Product[] = [
     turnaround: "2–3 business days",
     minQuantity: 10,
     tags: ["DIE-CUT", "GLOSSY", "MATTE", "WATERPROOF", "OUTDOOR"],
-    img: "/products/vinyl-stickers.jpeg",
+    img: "/products/vinyl-stickers-main.jpeg",
     gallery: [
+      "/products/vinyl-stickers-3.webp",
       "/products/vinyl-stickers.jpeg",
-      "/products/vinyl-stickers-2.webp",
     ],
     faqs: [
       { q: "How long do vinyl stickers last outdoors?", a: "With gloss or matte laminate, our cast vinyl stickers are rated 5+ years outdoors under normal UV and weather conditions." },
@@ -259,8 +259,9 @@ export const products: Product[] = [
     turnaround: "2–4 business days",
     minQuantity: 1,
     tags: ["FRONT-LIT", "OUTDOOR", "LARGE FORMAT", "HOARDING", "UV STABLE"],
-    img: "/products/front-lit-flex.webp",
+    img: "/products/front-lit-flex-main.webp",
     gallery: [
+      "/products/front-lit-flex-2.webp",
       "/products/front-lit-flex.webp",
     ],
     faqs: [
@@ -313,11 +314,10 @@ export const products: Product[] = [
     turnaround: "3–5 business days",
     minQuantity: 1,
     tags: ["BACK-LIT", "LIGHTBOX", "TRANSLUCENT", "LED", "LARGE FORMAT"],
-    img: "/products/back-lit-flex.jpeg",
+    img: "/products/back-lit-flex-main.jpeg",
     gallery: [
-      "/products/back-lit-flex.jpeg",
-      "/products/back-lit-flex-2.jpeg",
-      "/products/back-lit-flex-3.jpeg",
+      "/products/back-lit-flex-4.jpeg",
+      "/products/back-lit-flex-5.jpeg",
     ],
     faqs: [
       { q: "What is the difference between front-lit and back-lit flex?", a: "Front-lit flex has an opaque white base for use with light shining onto the banner from the front. Back-lit flex is semi-translucent for use in lightboxes where light shines through from behind." },
@@ -325,7 +325,7 @@ export const products: Product[] = [
       { q: "Do you print for LED lightboxes specifically?", a: "Yes — our backlit flex is optimised for LED lighting, which is cooler and more even than fluorescent. It handles the blue-shifted LED spectrum correctly." },
       { q: "Can I order a replacement graphic for an existing lightbox?", a: "Absolutely. Send us the cabinet dimensions and we'll produce an exact-fit replacement graphic with correct bleed allowances." },
     ],
-        specs: [
+    specs: [
       { label: "Media Weight", value: "380gsm / 450gsm" },
       { label: "Print Technology", value: "Solvent Inkjet (backlit profiles)" },
       { label: "Light Transmission", value: "Optimised for even diffusion" },
@@ -368,9 +368,9 @@ export const products: Product[] = [
     turnaround: "4–6 business days",
     minQuantity: 1,
     tags: ["UV DIRECT", "CANVAS", "GALLERY", "INTERIOR", "FINE ART"],
-    img: "/products/wood-uv-print.jpeg",
+    img: "/products/canvas-uv-print-main.jpeg",
     gallery: [
-      "/products/wood-uv-print.jpeg",
+      "/products/canvas-uv-print-2.jpeg",
     ],
     faqs: [
       { q: "Can I supply my own artwork?", a: "Yes — we accept high-resolution files at minimum 150 dpi at final print size. We'll provide a digital proof before printing." },
@@ -421,8 +421,9 @@ export const products: Product[] = [
     turnaround: "5–7 business days",
     minQuantity: 1,
     tags: ["UV DIRECT", "GLASS", "ARCHITECTURAL", "INTERIOR", "DECORATIVE"],
-    img: "/products/glass-uv-print.webp",
+    img: "/products/glass-uv-print-main.webp",
     gallery: [
+      "/products/glass-uv-print-2.jpeg",
       "/products/glass-uv-print.webp",
     ],
     faqs: [
@@ -474,8 +475,9 @@ export const products: Product[] = [
     turnaround: "3–5 business days",
     minQuantity: 1,
     tags: ["UV DIRECT", "ACRYLIC", "PREMIUM SIGNAGE", "AWARDS", "RETAIL"],
-    img: "/products/acrylic-uv-print.jpeg",
+    img: "/products/acrylic-uv-print-main.jpeg",
     gallery: [
+      "/products/acrylic-uv-print-2.jpeg",
       "/products/acrylic-uv-print.jpeg",
     ],
     faqs: [
@@ -529,10 +531,10 @@ export const products: Product[] = [
     turnaround: "3–4 business days",
     minQuantity: 1,
     tags: ["PERFORATED", "WINDOW VINYL", "SEE-THROUGH", "VEHICLE WRAP", "RETAIL"],
-    img: "/products/one-way-vision.webp",
+    img: "/products/one-way-vision-main.webp",
     gallery: [
+      "/products/one-way-vision-3.webp",
       "/products/one-way-vision.webp",
-      "/products/one-way-vision-2.webp",
     ],
     faqs: [
       { q: "How much visibility is maintained from inside?", a: "In 50/50 OWV, 50% of the surface is perforated, providing reasonable inside visibility. In bright daylight, the graphic appears fully opaque from outside while the interior view is partially maintained." },
@@ -583,8 +585,9 @@ export const products: Product[] = [
     turnaround: "4–6 business days",
     minQuantity: 1,
     tags: ["UV DIRECT", "WOOD", "NATURAL", "INTERIOR DÉCOR", "LUXURY"],
-    img: "/products/wood-uv-print.jpeg",
+    img: "/products/wood-uv-print-main.jpeg",
     gallery: [
+      "/products/wood-uv-print-2.jpeg",
       "/products/wood-uv-print.jpeg",
     ],
     faqs: [
@@ -635,10 +638,9 @@ export const products: Product[] = [
     turnaround: "5–7 business days",
     minQuantity: 1,
     tags: ["ALUMINIUM", "DISPLAY", "PORTABLE", "EVENT", "RETAIL"],
-    img: "/products/front-lit-flex.webp",
+    img: "/products/aluminium-standee-main.jpeg",
     gallery: [
-      "/products/front-lit-flex.webp",
-      "/products/back-lit-flex.jpeg",
+      "/products/aluminium-standee-2.jpeg",
     ],
     faqs: [
       { q: "Can I order replacement graphics without a new frame?", a: "Yes — replacement graphic panels are available separately. Just specify your standee model and graphic size when ordering." },
@@ -690,10 +692,9 @@ export const products: Product[] = [
     turnaround: "7–10 business days",
     minQuantity: 1,
     tags: ["RETAIL", "CUSTOM", "BRANDED", "FLOOR STANDING", "MERCHANDISING"],
-    img: "/products/foam-board-uv-direct.jpeg",
+    img: "/products/product-display-stand-main.jpeg",
     gallery: [
-      "/products/foam-board-uv-direct.jpeg",
-      "/products/foam-board-uv-direct-2.jpeg",
+      "/products/product-display-stand-2.jpeg",
     ],
     faqs: [
       { q: "Do you handle the full design process?", a: "Yes — our structural design team will work with you from concept to production, including technical drawings, 3D renderings, and prototype approval." },
@@ -743,10 +744,10 @@ export const products: Product[] = [
     turnaround: "5–8 business days",
     minQuantity: 10,
     tags: ["5MM", "INDUSTRIAL", "RIGID PACKAGING", "MOISTURE PROOF", "CUSTOM SIZE"],
-    img: "/products/sunpack-uv-direct.webp",
+    img: "/products/sunpack-box-tray-main.jpeg",
     gallery: [
-      "/products/sunpack-uv-direct.webp",
-      "/products/sunpack-uv-direct-2.jpeg",
+      "/products/sunpack-box-tray-2.jpeg",
+      "/products/sunpack-box-tray-3.jpeg",
     ],
     faqs: [
       { q: "What makes sunpack better than cardboard for industrial trays?", a: "Sunpack PVC is waterproof, does not degrade when wet, resists most chemicals, and is reusable many times over. Cardboard loses structural integrity when moist and cannot be sanitised effectively." },

@@ -7,9 +7,9 @@ const team = [
 
 const values = [
   { icon: "⊙", title: "Color obsession", desc: "We calibrate our Komori presses daily and maintain the industry's widest Pantone coverage — 99% of all solid colors." },
-  { icon: "✦", title: "Paper first", desc: "Before any job runs, we test the paper's coating, grain direction, and moisture content. Stock quality is non-negotiable." },
-  { icon: "↗", title: "Radical transparency", desc: "Every quote includes a full breakdown of materials and labor. No hidden die charges, no bait-and-switch paper swaps." },
-  { icon: "♻", title: "FSC & ISO 9001", desc: "All our papers are FSC-certified. Our facility runs on 100% renewable energy and recycles 98% of press waste." },
+  { icon: "✦", title: "Stock first", desc: "Before any job runs, we test the stock's coating, grain direction, and moisture content. Stock quality is non-negotiable." },
+  { icon: "↗", title: "Radical transparency", desc: "Every quote includes a full breakdown of materials and labor. No hidden die charges, no bait-and-switch stock swaps." },
+  { icon: "♻", title: "FSC Certified", desc: "All our stocks are FSC-certified. Our facility runs on 100% renewable energy and recycles 98% of press waste." },
 ];
 
 export default function AboutPage() {
@@ -38,9 +38,6 @@ export default function AboutPage() {
                 </p>
                 <p className="text-base text-white/50 leading-relaxed mb-8">
                   We would welcome the opportunity to collaborate with your esteemed organization and support your printing requirements with reliable and cost-effective solutions.
-                </p>
-                <p className="text-base text-white/50 leading-relaxed mb-8">
-                  Warm regards,<br />Mercury Products
                 </p>
                 <div className="flex flex-wrap gap-6">
                   {[{ v: "1990", l: "FOUNDED" }, { v: "30+", l: "CRAFTERS" }, { v: "1 Head City", l: "STUDIOS" }, { v: "1M+", l: "PIECES PRESSED" }].map((s) => (

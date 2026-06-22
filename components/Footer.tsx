@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { products } from "@/lib/products";
-import { COMPANY_NAME, COMPANY_EMAIL, COMPANY_PHONE, COMPANY_PHONE_ALT, COMPANY_ADDRESS, COMPANY_INSTAGRAM, COMPANY_FACEBOOK } from "@/lib/products";
+import { COMPANY_NAME, COMPANY_EMAIL, COMPANY_PHONE, COMPANY_PHONE_ALT, COMPANY_PHONE_ALT2, COMPANY_ADDRESS, COMPANY_INSTAGRAM, COMPANY_FACEBOOK } from "@/lib/products";
 
 const productLinks = products.slice(0, 7).map((p) => ({ label: p.name.split(" — ")[0], href: `/products/${p.slug}` }));
 
@@ -100,6 +100,11 @@ export default function Footer() {
                   onMouseEnter={(e) => (e.currentTarget.style.color = "#ffffff")}
                   onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.42)")}>
                   Ph: {COMPANY_PHONE_ALT}
+                </a>
+                <a href={`tel:${COMPANY_PHONE_ALT2}`} style={{ fontSize: "13px", color: "rgba(255,255,255,0.42)", textDecoration: "none", transition: "color 0.15s" }}
+                  onMouseEnter={(e) => (e.currentTarget.style.color = "#ffffff")}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.42)")}>
+                  Ph: {COMPANY_PHONE_ALT2}
                 </a>
               </div>
               <a href={`mailto:${COMPANY_EMAIL}`} style={{ fontSize: "13px", color: "rgba(255,255,255,0.42)", textDecoration: "none", transition: "color 0.15s" }}
