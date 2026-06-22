@@ -31,3 +31,17 @@ export async function POST(req: NextRequest) {
   }
   return NextResponse.json({ success: true });
 }
+
+// app/api/clear-reviews/route.ts
+
+import { Redis } from "@upstash/redis";
+
+const redis = new Redis({
+  url: process.env.STORAGE_KV_REST_API_URL!,
+  token: process.env.STORAGE_KV_REST_API_TOKEN!,
+});
+
+export async function DELETE() {
+  await redis.del("reviews");
+  return Response.json({ success: true });
+}
