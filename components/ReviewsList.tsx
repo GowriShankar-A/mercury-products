@@ -1,4 +1,5 @@
 import { getApprovedReviews } from "@/lib/reviews";
+import type { Review } from "@/lib/reviews";
 
 function Stars({ rating }: { rating: number }) {
   return (
@@ -21,7 +22,7 @@ function timeAgo(iso: string) {
 }
 
 export default async function ReviewsList() {
-  let reviews = [];
+  let reviews: Review[] = [];
   try {
     reviews = await getApprovedReviews();
   } catch {

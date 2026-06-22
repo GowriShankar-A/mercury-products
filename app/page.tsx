@@ -784,6 +784,40 @@ export default function HomePage() {
         </section>
       </Reveal>
 
+      {/* ── Reviews CTA ── */}
+      <Reveal delayMs={260}>
+        <section className="px-6 md:px-10 mb-16">
+          <div className="max-w-6xl mx-auto rounded-3xl overflow-hidden relative"
+            style={{ background: "linear-gradient(135deg,#0d1f1a 0%,#0a1a14 100%)", border: "1px solid rgba(34,211,102,0.15)", padding: "clamp(36px,5vw,60px)" }}>
+            <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 60% 80% at 50% 50%,rgba(34,211,102,0.07),transparent 70%)", pointerEvents: "none" }} />
+            <div style={{ position: "relative", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: "28px" }}>
+              <div>
+                <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "10px" }}>
+                  <span style={{ fontSize: "22px" }}>⭐</span>
+                  <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: "rgba(34,211,102,0.7)" }}>CUSTOMER REVIEWS</span>
+                </div>
+                <h2 style={{ fontSize: "clamp(22px,3vw,34px)", fontWeight: 800, color: "#fff", margin: "0 0 8px", letterSpacing: "-0.02em" }}>
+                  Worked with us? Tell the world.
+                </h2>
+                <p style={{ fontSize: "14px", color: "rgba(255,255,255,0.45)", margin: 0, maxWidth: "420px", lineHeight: 1.65 }}>
+                  Your feedback helps other businesses find quality printing. Takes just 60 seconds.
+                </p>
+              </div>
+              <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
+                <Link href="/reviews"
+                  style={{ display: "inline-flex", alignItems: "center", gap: "8px", padding: "14px 28px", borderRadius: "9999px", background: "rgba(34,211,102,0.15)", border: "1px solid rgba(34,211,102,0.35)", color: "#4ade80", fontWeight: 700, fontSize: "14px", textDecoration: "none" }}>
+                  Write a Review →
+                </Link>
+                <Link href="/reviews"
+                  style={{ display: "inline-flex", alignItems: "center", gap: "8px", padding: "14px 24px", borderRadius: "9999px", background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.09)", color: "rgba(255,255,255,0.55)", fontWeight: 600, fontSize: "14px", textDecoration: "none" }}>
+                  Read Reviews
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+      </Reveal>
+
       {/* ── Final CTA ── */}
       <Reveal delayMs={280}>
         <section className="px-6 md:px-10 mb-24">

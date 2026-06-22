@@ -25,7 +25,7 @@ export async function submitReview(data: Omit<Review, "id" | "createdAt" | "stat
     createdAt: new Date().toISOString(),
     status: "pending",
   };
-  await redis.hset(`review:${id}`, review);
+  await redis.hset(`review:${id}`, review as any);
   await redis.lpush("reviews:pending", id);
   return { success: true };
 }
@@ -35,7 +35,7 @@ export async function getApprovedReviews(): Promise<Review[]> {
   const ids: string[] = await redis.lrange("reviews:approved", 0, -1);
   if (!ids.length) return [];
   const reviews = await Promise.all(
-    ids.map((id) => redis.hgetall(`review:${id}`) as Promise<Review>)
+    ids.map(async (id) => (await redis.hgetall(`review:${id}`)) as unknown as Review)
   );
   return reviews.filter(Boolean).sort(
     (a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
@@ -47,7 +47,7 @@ export async function getPendingReviews(): Promise<Review[]> {
   const ids: string[] = await redis.lrange("reviews:pending", 0, -1);
   if (!ids.length) return [];
   const reviews = await Promise.all(
-    ids.map((id) => redis.hgetall(`review:${id}`) as Promise<Review>)
+    ids.map(async (id) => (await redis.hgetall(`review:${id}`)) as unknown as Review)
   );
   return reviews.filter(Boolean);
 }

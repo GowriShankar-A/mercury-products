@@ -272,6 +272,7 @@ export default function Navbar() {
               {[
                 { label: "Products & Services", href: "/catalog" },
                 { label: "About", href: "/about" },
+                { label: "Reviews", href: "/reviews" },
                 // { label: "Blog", href: "/blog" },
                 // { label: "FAQ", href: "/faq" },
                 { label: "Contact", href: "/contact" },
