@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import GlowSlider from "@/components/GlowSlider";
-import PaperThickness from "@/components/PaperThickness";
 import { products, SITE_URL, COMPANY_NAME } from "@/lib/products";
 
 export const metadata: Metadata = {
@@ -641,8 +640,7 @@ export default function HomePage() {
         </section>
       </Reveal>
 
-      {/* ── Paper Thickness Section ── */}
-      <PaperThickness />
+
 
       {/* About preview */}
       <Reveal delayMs={180}>
@@ -651,7 +649,6 @@ export default function HomePage() {
             style={{ background: "linear-gradient(135deg, var(--card-bg) 0%, rgba(var(--card-bg-rgb), 0.8) 50%, var(--card-bg) 100%)", border: "1px solid var(--card-border)" }}>
             <div className="absolute top-4 right-4 px-3 py-1.5 rounded-lg text-xs font-semibold text-text-muted transition-colors duration-355"
               style={{ background: "rgba(var(--hover-bg-rgb), 0.07)", border: "1px solid var(--card-border)" }}>
-              CERTIFIED · FSC · ISO 9001
             </div>
             <div className="flex items-center gap-2 mb-4">
               <span className="text-xs font-semibold tracking-widest uppercase text-text-dim transition-colors duration-355">✦ ABOUT MERCURY</span>

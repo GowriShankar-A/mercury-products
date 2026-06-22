@@ -54,8 +54,6 @@ export default function AboutPage() {
               {/* Certification badge */}
               <div className="shrink-0 px-6 py-4 rounded-2xl self-start"
                 style={{ background: "#141414", border: "1px solid rgba(255,255,255,0.08)" }}>
-                <p className="text-xs uppercase tracking-widest text-white/35 mb-1">CERTIFIED</p>
-                <p className="font-bold text-white">FSC · ISO 9001</p>
               </div>
             </div>
           </div>

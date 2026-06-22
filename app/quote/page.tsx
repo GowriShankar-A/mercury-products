@@ -5,10 +5,6 @@ import { sendQuoteEmail } from "@/app/actions";
 
 const QUOTE_GRADIENT = "linear-gradient(90deg, #22D8FF 0%, #6D6EFF 38%, #D94EFF 70%, #FF9A28 100%)";
 
-const productOptions = ["Business Cards", "Packaging", "Stickers", "Posters", "Brochures", "Labels", "Other"];
-const shapeOptions = ["Rectangle", "Square", "Rounded", "Circle", "Oval", "Die-Cut", "Custom"];
-const thicknessOptions = ["170gsm", "300gsm", "400gsm", "600gsm", "Triplex 900gsm", "Rigid 2mm"];
-const finishOptions = ["Matte", "Gloss", "Soft-touch", "Foil Stamp", "Spot UV", "Emboss", "Edge Paint", "Not sure yet"];
 
 const perks = [
   "Free design review",
@@ -22,12 +18,6 @@ const FOCUS_COLORS: Record<string, { border: string; glow: string }> = {
   name:      { border: "rgba(109,110,255,0.55)", glow: "0 0 18px rgba(109,110,255,0.18)" },
   email:     { border: "rgba(109,110,255,0.55)", glow: "0 0 18px rgba(109,110,255,0.18)" },
   phone:     { border: "rgba(109,110,255,0.55)", glow: "0 0 18px rgba(109,110,255,0.18)" },
-  company:   { border: "rgba(109,110,255,0.4)",  glow: "none" },
-  product:   { border: "rgba(109,110,255,0.4)",  glow: "none" },
-  shape:     { border: "rgba(34,216,255,0.45)",  glow: "0 0 18px rgba(34,216,255,0.14)" },
-  thickness: { border: "rgba(34,216,255,0.55)",  glow: "0 0 18px rgba(34,216,255,0.18)" },
-  finish:    { border: "rgba(217,78,255,0.45)",  glow: "0 0 18px rgba(217,78,255,0.14)" },
-  quantity:  { border: "rgba(46,231,168,0.55)",  glow: "0 0 18px rgba(46,231,168,0.18)" },
   details:   { border: "rgba(109,110,255,0.4)",  glow: "none" },
 };
 
