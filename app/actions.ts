@@ -6,9 +6,9 @@ const SMTP_CONFIG = {
   host: process.env.SMTP_HOST || "smtp.gmail.com",
   port: process.env.SMTP_PORT ? Number(process.env.SMTP_PORT) : 465,
   secure: process.env.SMTP_SECURE ? process.env.SMTP_SECURE === "true" : true,
-  user: process.env.SMTP_USER || "sizzle.sabari02@gmail.com",
+  user: process.env.SMTP_USER || "gowrishankara003@gmail.com",
   pass: process.env.SMTP_PASS,
-  from: process.env.SMTP_FROM || '"Mercury Products" <sizzle.sabari02@gmail.com>',
+  from: process.env.SMTP_FROM || '"Mercury Products" <gowrishankara003@gmail.com>',
   to: process.env.SMTP_TO || "mercuryproducts@gmail.com",
 };
 
