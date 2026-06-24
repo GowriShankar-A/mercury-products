@@ -18,14 +18,14 @@ export const metadata: Metadata = {
 };
 
 const staticTestimonials = [
-  { quote: "Mercury transformed our retail POS completely. The UV prints on sunpack came out vivid and clean — exactly what we spec'd. Delivered 3 days ahead of schedule.", name: "Ramany", role: "Marketing Director, RetailEdge India", initials: "RM", color: "#f472b6", rating: 5, product: "Sunpack UV Direct" },
-  { quote: "The acrylic UV prints for our awards night were phenomenal. Crystal clear, the colours popped, and the edges were laser-cut to perfection. Every guest commented on them.", name: "Praveen", role: "Events Manager, Luminar Events", initials: "PS", color: "#22d3ee", rating: 5, product: "Acrylic UV Print" },
-  { quote: "We needed backlit flex graphics for our airport lightboxes in Mumbai and Delhi. Mercury supplied perfect panels — even colour, no hotspots. Exactly as specified.", name: "Arun", role: "Brand Operations, FlyHigh Aviation", initials: "AK", color: "#818cf8", rating: 5, product: "Back Lit Flex" },
-  { quote: "Vinyl stickers for our product launches. Ordered 5,000 pieces, multiple designs — delivered in 2 days, colours spot-on, cut perfectly. Will not go anywhere else.", name: "Deepika Narayanan", role: "Founder, Craft Co. Brand Studio", initials: "DN", color: "#4ade80", rating: 5, product: "Vinyl Stickers" },
-  { quote: "The canvas UV prints for our hotel lobby are breathtaking. The quality is gallery standard and they've held up beautifully for two years without any fading.", name: "Srimathi", role: "Interior Design Lead, The Elara Group", initials: "VS", color: "#fb923c", rating: 5, product: "Canvas UV Print" },
-  { quote: "We spec'd custom 5mm sunpack trays for our electronics division. Mercury got the dimensions exact, supplied 500 units, and the quality was consistent throughout.", name: "Kannan", role: "Procurement Manager, TechLink Manufacturing", initials: "AG", color: "#c084fc", rating: 5, product: "5mm Sunpack Box & Tray" },
-  { quote: "The aluminium standees for our exhibition looked extremely premium. Snap-frame system worked perfectly — we changed graphics three times during the event without issues.", name: "Dasaradhan", role: "Exhibition Manager, ExpoCraft", initials: "SR", color: "#f472b6", rating: 5, product: "Aluminium Standee" },
-  { quote: "Our one-way-vision window graphics for the Mumbai store rollout were flawless. Perfect print, clean install, and the inside-out visibility was exactly as described.", name: "Harish", role: "Visual Merchandising, Trendhive Retail", initials: "MJ", color: "#22d3ee", rating: 5, product: "One Way Vision" },
+  { quote: "Mercury transformed our retail POS completely. The UV prints on sunpack came out vivid and clean — exactly what we spec'd. Delivered 3 days ahead of schedule.", name: "Ramany", initials: "RM", color: "#f472b6", rating: 5, product: "Sunpack UV Direct" },
+  { quote: "The acrylic UV prints for our awards night were phenomenal. Crystal clear, the colours popped, and the edges were laser-cut to perfection. Every guest commented on them.", name: "Praveen", initials: "P", color: "#22d3ee", rating: 5, product: "Acrylic UV Print" },
+  { quote: "We needed backlit flex graphics for our airport lightboxes in Mumbai and Delhi. Mercury supplied perfect panels — even colour, no hotspots. Exactly as specified.", name: "Arun", initials: "A", color: "#818cf8", rating: 5, product: "Back Lit Flex" },
+  { quote: "Vinyl stickers for our product launches. Ordered 5,000 pieces, multiple designs — delivered in 2 days, colours spot-on, cut perfectly. Will not go anywhere else.", name: "Deepika Narayanan", initials: "D", color: "#4ade80", rating: 5, product: "Vinyl Stickers" },
+  { quote: "The canvas UV prints for our hotel lobby are breathtaking. The quality is gallery standard and they've held up beautifully for two years without any fading.", name: "Srimathi", initials: "S", color: "#fb923c", rating: 5, product: "Canvas UV Print" },
+  { quote: "We spec'd custom 5mm sunpack trays for our electronics division. Mercury got the dimensions exact, supplied 500 units, and the quality was consistent throughout.", name: "Kannan", initials: "K", color: "#c084fc", rating: 5, product: "5mm Sunpack Box & Tray" },
+  { quote: "The aluminium standees for our exhibition looked extremely premium. Snap-frame system worked perfectly — we changed graphics three times during the event without issues.", name: "Dasaradhan", initials: "D", color: "#f472b6", rating: 5, product: "Aluminium Standee" },
+  { quote: "Our one-way-vision window graphics for the Mumbai store rollout were flawless. Perfect print, clean install, and the inside-out visibility was exactly as described.", name: "Harish", initials: "H", color: "#22d3ee", rating: 5, product: "One Way Vision" },
 ];
 
 const COLORS = ["#f472b6", "#22d3ee", "#818cf8", "#4ade80", "#fb923c", "#c084fc"];
@@ -133,7 +133,7 @@ export default async function TestimonialsPage() {
                   </div>
                   <div>
                     <p style={{ fontSize: "14px", fontWeight: 700, color: "#ffffff", margin: 0 }}>{t.name}</p>
-                    <p style={{ fontSize: "12px", color: "rgba(255,255,255,0.38)", margin: 0, marginTop: "2px" }}>{t.role}</p>
+                    <p style={{ fontSize: "12px", color: "rgba(255,255,255,0.38)", margin: 0, marginTop: "2px" }}></p>
                   </div>
                 </div>
               </div>

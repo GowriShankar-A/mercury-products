@@ -67,10 +67,10 @@ const possibilitiesProducts = [
 ];
 
 const testimonials = [
-  { quote: "Mercury made our launch packaging feel like a museum piece. Our customers post unboxing videos unprompted.", name: "Ramany", role: "Brand Director, Nuvo Coffee", initials: "MC", color: "#ec4899" },
-  { quote: "The soft-touch + foil combo on our business cards is unreasonably good. Best print partner we've ever worked with.", name: "Praveen", role: "Founder, Atlas Studio", initials: "DP", color: "#22d3ee" },
-  { quote: "They caught a CMYK conversion issue our agency missed. That care is rare. We're lifers now.", name: "Arun", role: "Creative Lead, Florae", initials: "LS", color: "#fb923c" },
-  { quote: "Edge-painted triplex cards arrived exactly the Pantone we asked for. No drama, just press magic.", name: "Shankar", role: "Art Director, Hex&Co", initials: "TK", color: "#a855f7" },
+  { quote: "Mercury made our launch packaging feel like a museum piece. Our customers post unboxing videos unprompted.", name: "Ramany", initials: "RM", color: "#ec4899" },
+  { quote: "The soft-touch + foil combo on our business cards is unreasonably good. Best print partner we've ever worked with.", name: "Praveen", initials: "P", color: "#22d3ee" },
+  { quote: "They caught a CMYK conversion issue our agency missed. That care is rare. We're lifers now.", name: "Arun", initials: "A", color: "#fb923c" },
+  { quote: "Edge-painted triplex cards arrived exactly the Pantone we asked for. No drama, just press magic.", name: "Shankar", initials: "S", color: "#a855f7" },
 ];
 const finishItems = [
   { text: "Sunpack -UV Direct printing", color: "#00E5FF" },      // Cyan
@@ -709,7 +709,7 @@ export default function HomePage() {
                     </div>
                     <div>
                       <p className="text-sm font-semibold text-text-primary transition-colors duration-355">{t.name}</p>
-                      <p className="text-xs text-text-dim transition-colors duration-355">{t.role}</p>
+                      <p className="text-xs text-text-dim transition-colors duration-355"></p>
                     </div>
                   </div>
                 </div>
