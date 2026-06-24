@@ -52,12 +52,12 @@ export default function CatalogClient() {
 
         {/* Header */}
         <div style={{ marginBottom: "36px" }}>
-          <h1 style={{ fontSize: "clamp(52px, 7vw, 78px)", fontWeight: 900, letterSpacing: "-0.03em", lineHeight: 1.0, color: "#ffffff", margin: "0 0 16px 0" }}>
+          <h1 style={{ fontSize: "clamp(52px, 7vw, 78px)", fontWeight: 900, letterSpacing: "-0.03em", lineHeight: 1.0, color: "#0a1628", margin: "0 0 16px 0" }}>
             Product{" "}
             <span style={{ background: CATALOG_GRADIENT, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>catalog</span>
-            <span style={{ WebkitTextFillColor: "#ffffff", color: "#ffffff" }}>.</span>
+            <span style={{ WebkitTextFillColor: "#0a1628", color: "#0a1628" }}>.</span>
           </h1>
-          <p style={{ fontSize: "17px", color: "rgba(255,255,255,0.5)", lineHeight: 1.6, margin: 0, maxWidth: "560px" }}>
+          <p style={{ fontSize: "17px", color: "rgba(10,22,40,0.5)", lineHeight: 1.6, margin: 0, maxWidth: "560px" }}>
             13 premium UV printing products — from rigid substrates to flexible media. Every item custom-quoted for your exact requirements.
           </p>
         </div>
@@ -67,17 +67,17 @@ export default function CatalogClient() {
           {/* Search */}
           <div style={{ position: "relative", flexGrow: 1, maxWidth: "340px" }}>
             <svg width="15" height="15" viewBox="0 0 20 20" fill="none" style={{ position: "absolute", left: "14px", top: "50%", transform: "translateY(-50%)", pointerEvents: "none" }}>
-              <circle cx="9" cy="9" r="6" stroke="rgba(255,255,255,0.3)" strokeWidth="1.8" />
-              <path d="M15 15l-3.5-3.5" stroke="rgba(255,255,255,0.3)" strokeWidth="1.8" strokeLinecap="round" />
+              <circle cx="9" cy="9" r="6" stroke="rgba(10,22,40,0.3)" strokeWidth="1.8" />
+              <path d="M15 15l-3.5-3.5" stroke="rgba(10,22,40,0.3)" strokeWidth="1.8" strokeLinecap="round" />
             </svg>
             <input
               type="search"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder="Search products…"
-              style={{ width: "100%", paddingLeft: "38px", paddingRight: "16px", paddingTop: "12px", paddingBottom: "12px", borderRadius: "9999px", background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)", color: "#ffffff", fontSize: "14px", outline: "none", fontFamily: "inherit", transition: "border-color 0.2s ease" }}
-              onFocus={(e) => (e.currentTarget.style.borderColor = "rgba(255,255,255,0.25)")}
-              onBlur={(e) => (e.currentTarget.style.borderColor = "rgba(255,255,255,0.1)")}
+              style={{ width: "100%", paddingLeft: "38px", paddingRight: "16px", paddingTop: "12px", paddingBottom: "12px", borderRadius: "9999px", background: "rgba(255,255,255,0.55)", border: "1px solid rgba(0,0,0,0.1)", color: "#0a1628", fontSize: "14px", outline: "none", fontFamily: "inherit", transition: "border-color 0.2s ease" }}
+              onFocus={(e) => (e.currentTarget.style.borderColor = "rgba(0,0,0,0.25)")}
+              onBlur={(e) => (e.currentTarget.style.borderColor = "rgba(0,0,0,0.1)")}
             />
           </div>
 
@@ -89,7 +89,7 @@ export default function CatalogClient() {
               return (
                 <button key={c} onClick={() => setActiveFilter(c)}
                   onMouseEnter={() => setHoveredPill(c)} onMouseLeave={() => setHoveredPill(null)}
-                  style={{ padding: "10px 18px", borderRadius: "9999px", fontSize: "13px", fontWeight: 600, cursor: "pointer", border: `1px solid ${isActive ? "#ffffff" : "rgba(255,255,255,0.08)"}`, background: isActive ? "#ffffff" : isHov ? "rgba(255,255,255,0.08)" : "rgba(255,255,255,0.04)", color: isActive ? "#111111" : isHov ? "rgba(255,255,255,0.9)" : "rgba(255,255,255,0.72)", transition: "background 0.2s, color 0.2s, border-color 0.2s", whiteSpace: "nowrap", letterSpacing: "-0.01em" }}>
+                  style={{ padding: "10px 18px", borderRadius: "9999px", fontSize: "13px", fontWeight: 600, cursor: "pointer", border: `1px solid ${isActive ? "#0a1628" : "rgba(0,0,0,0.12)"}`, background: isActive ? "#0a1628" : isHov ? "rgba(0,0,0,0.08)" : "rgba(255,255,255,0.5)", color: isActive ? "#ffffff" : isHov ? "rgba(10,22,40,0.85)" : "rgba(10,22,40,0.65)", transition: "background 0.2s, color 0.2s, border-color 0.2s", whiteSpace: "nowrap", letterSpacing: "-0.01em" }}>
                   {c}
                 </button>
               );
@@ -98,14 +98,14 @@ export default function CatalogClient() {
 
           {/* Sort */}
           <select value={sort} onChange={(e) => setSort(e.target.value)}
-            style={{ padding: "10px 16px", borderRadius: "9999px", background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)", color: "rgba(255,255,255,0.75)", fontSize: "13px", fontWeight: 600, cursor: "pointer", outline: "none", fontFamily: "inherit", marginLeft: "auto" }}>
+            style={{ padding: "10px 16px", borderRadius: "9999px", background: "rgba(255,255,255,0.55)", border: "1px solid rgba(0,0,0,0.1)", color: "rgba(10,22,40,0.75)", fontSize: "13px", fontWeight: 600, cursor: "pointer", outline: "none", fontFamily: "inherit", marginLeft: "auto" }}>
             {SORT_OPTIONS.map((o) => <option key={o} value={o}>{o}</option>)}
           </select>
         </div>
 
         {/* Result count */}
         {(search || activeFilter !== "All") && (
-          <p style={{ fontSize: "13px", color: "rgba(255,255,255,0.35)", marginBottom: "24px" }}>
+          <p style={{ fontSize: "13px", color: "rgba(10,22,40,0.35)", marginBottom: "24px" }}>
             {filtered.length} product{filtered.length !== 1 ? "s" : ""} found
             {search && ` for "${search}"`}
             {activeFilter !== "All" && ` in ${activeFilter}`}
@@ -115,8 +115,8 @@ export default function CatalogClient() {
         {/* Cards grid */}
         {filtered.length === 0 ? (
           <div style={{ textAlign: "center", padding: "80px 20px" }}>
-            <p style={{ fontSize: "18px", color: "rgba(255,255,255,0.35)" }}>No products match your search.</p>
-            <button onClick={() => { setSearch(""); setActiveFilter("All"); }} style={{ marginTop: "16px", padding: "12px 24px", borderRadius: "9999px", background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.1)", color: "rgba(255,255,255,0.7)", fontSize: "14px", cursor: "pointer", fontFamily: "inherit" }}>
+            <p style={{ fontSize: "18px", color: "rgba(10,22,40,0.35)" }}>No products match your search.</p>
+            <button onClick={() => { setSearch(""); setActiveFilter("All"); }} style={{ marginTop: "16px", padding: "12px 24px", borderRadius: "9999px", background: "rgba(255,255,255,0.6)", border: "1px solid rgba(0,0,0,0.1)", color: "rgba(10,22,40,0.7)", fontSize: "14px", cursor: "pointer", fontFamily: "inherit" }}>
               Clear filters
             </button>
           </div>
@@ -137,19 +137,19 @@ export default function CatalogClient() {
                       {/* Category dot + badge */}
                       <div style={{ display: "flex", alignItems: "center", gap: "7px", marginBottom: "10px", flexWrap: "wrap" }}>
                         <span style={{ width: "7px", height: "7px", borderRadius: "50%", background: dotColor, flexShrink: 0, boxShadow: `0 0 6px ${dotColor}` }} />
-                        <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "rgba(255,255,255,0.5)", lineHeight: 1 }}>{p.category}</span>
+                        <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "rgba(10,22,40,0.5)", lineHeight: 1 }}>{p.category}</span>
                         {p.badge && (
                           <span style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", padding: "3px 9px", borderRadius: "9999px", color: dotColor, background: `${dotColor}18`, border: `1px solid ${dotColor}40` }}>{p.badge}</span>
                         )}
                       </div>
 
-                      <h3 style={{ fontSize: "clamp(18px, 2vw, 28px)", fontWeight: 700, color: "#ffffff", letterSpacing: "-0.02em", lineHeight: 1.15, margin: "0 0 8px 0" }}>{p.name}</h3>
-                      <p style={{ fontSize: "14px", color: "rgba(255,255,255,0.45)", lineHeight: 1.6, margin: "0 0 14px 0", display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical" as const, overflow: "hidden" }}>{p.shortDesc}</p>
+                      <h3 style={{ fontSize: "clamp(18px, 2vw, 28px)", fontWeight: 700, color: "#0a1628", letterSpacing: "-0.02em", lineHeight: 1.15, margin: "0 0 8px 0" }}>{p.name}</h3>
+                      <p style={{ fontSize: "14px", color: "rgba(10,22,40,0.45)", lineHeight: 1.6, margin: "0 0 14px 0", display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical" as const, overflow: "hidden" }}>{p.shortDesc}</p>
 
                       {/* Tags */}
                       <div style={{ display: "flex", flexWrap: "wrap", gap: "6px" }}>
                         {p.tags.slice(0, 3).map((t) => (
-                          <span key={t} style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", padding: "5px 10px", borderRadius: "9999px", color: "rgba(255,255,255,0.55)", background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)" }}>{t}</span>
+                          <span key={t} style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", padding: "5px 10px", borderRadius: "9999px", color: "rgba(10,22,40,0.55)", background: "rgba(255,255,255,0.6)", border: "1px solid rgba(0,0,0,0.08)" }}>{t}</span>
                         ))}
                       </div>
                     </div>
@@ -157,8 +157,8 @@ export default function CatalogClient() {
                     {/* Footer */}
                     <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginTop: "20px", gap: "16px" }}>
                       <div>
-                        <p style={{ fontSize: "10px", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.05em", color: "rgba(255,255,255,0.35)", margin: "0 0 2px 0" }}>Price Guidance</p>
-                        <p style={{ fontSize: "13.5px", fontWeight: 700, color: "#ffffff", margin: 0 }}>{p.price}</p>
+                        <p style={{ fontSize: "10px", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.05em", color: "rgba(10,22,40,0.35)", margin: "0 0 2px 0" }}>Price Guidance</p>
+                        <p style={{ fontSize: "13.5px", fontWeight: 700, color: "#0a1628", margin: 0 }}>{p.price}</p>
                       </div>
                       <Link href={`/products/${p.slug}`} className="cat-details-link" style={{ flexShrink: 0 }}>
                         View details <span className="cat-arrow">›</span>

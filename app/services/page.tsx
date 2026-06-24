@@ -100,15 +100,15 @@ export default function ServicesPage() {
       <Reveal>
         <section style={{ padding: "clamp(40px,6vw,80px) clamp(24px,4vw,48px)", maxWidth: "1320px", margin: "0 auto" }}>
           <div style={{ display: "inline-flex", alignItems: "center", gap: "8px", marginBottom: "24px" }}>
-            <span style={{ fontSize: "11px", fontWeight: 600, letterSpacing: "0.16em", textTransform: "uppercase", color: "rgba(255,255,255,0.32)" }}>⊙ SERVICES</span>
+            <span style={{ fontSize: "11px", fontWeight: 600, letterSpacing: "0.16em", textTransform: "uppercase", color: "rgba(10,22,40,0.32)" }}>⊙ SERVICES</span>
           </div>
-          <h1 style={{ fontSize: "clamp(48px,7vw,80px)", fontWeight: 900, letterSpacing: "-0.03em", lineHeight: 1.0, color: "#ffffff", margin: "0 0 20px 0" }}>
+          <h1 style={{ fontSize: "clamp(48px,7vw,80px)", fontWeight: 900, letterSpacing: "-0.03em", lineHeight: 1.0, color: "#0a1628", margin: "0 0 20px 0" }}>
             Every print service,{" "}
             <span style={{ background: "linear-gradient(90deg,#22d3ee,#818cf8,#c084fc,#f472b6)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
               under one roof.
             </span>
           </h1>
-          <p style={{ fontSize: "19px", color: "rgba(255,255,255,0.55)", maxWidth: "600px", lineHeight: 1.65, margin: "0 0 36px 0" }}>
+          <p style={{ fontSize: "19px", color: "rgba(10,22,40,0.55)", maxWidth: "600px", lineHeight: 1.65, margin: "0 0 36px 0" }}>
             From UV flatbed direct printing on rigid substrates to large-format flex banners, vinyl stickers, display stands, and industrial packaging — Mercury Products handles it all.
           </p>
           <Link href="/quote" style={{ display: "inline-flex", alignItems: "center", gap: "8px", padding: "15px 28px", borderRadius: "9999px", background: "linear-gradient(135deg,#ec4899,#f97316)", color: "#ffffff", fontWeight: 700, fontSize: "15px", textDecoration: "none" }}>
@@ -122,15 +122,15 @@ export default function ServicesPage() {
         <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
           {services.map((s, i) => (
             <Reveal key={s.id} delayMs={i * 60}>
-              <div style={{ borderRadius: "28px", padding: "clamp(32px,4vw,48px)", background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.07)", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "40px", alignItems: "start" }} className="service-card-grid">
+              <div style={{ borderRadius: "28px", padding: "clamp(32px,4vw,48px)", background: "rgba(255,255,255,0.55)", border: "1px solid rgba(0,0,0,0.07)", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "40px", alignItems: "start" }} className="service-card-grid">
                 {/* Left */}
                 <div>
                   <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "16px" }}>
                     <span style={{ fontSize: "22px", color: s.accent }}>{s.icon}</span>
-                    <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "rgba(255,255,255,0.35)" }}>{s.category}</span>
+                    <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "rgba(10,22,40,0.35)" }}>{s.category}</span>
                   </div>
-                  <h2 style={{ fontSize: "clamp(24px,3vw,36px)", fontWeight: 800, letterSpacing: "-0.025em", color: "#ffffff", margin: "0 0 14px 0" }}>{s.title}</h2>
-                  <p style={{ fontSize: "15px", color: "rgba(255,255,255,0.55)", lineHeight: 1.7, margin: "0 0 24px 0" }}>{s.desc}</p>
+                  <h2 style={{ fontSize: "clamp(24px,3vw,36px)", fontWeight: 800, letterSpacing: "-0.025em", color: "#0a1628", margin: "0 0 14px 0" }}>{s.title}</h2>
+                  <p style={{ fontSize: "15px", color: "rgba(10,22,40,0.55)", lineHeight: 1.7, margin: "0 0 24px 0" }}>{s.desc}</p>
                   <Link href="/quote" style={{ display: "inline-flex", alignItems: "center", gap: "6px", fontSize: "13px", fontWeight: 600, color: s.accent, textDecoration: "none" }}>
                     Get a quote for this service →
                   </Link>
@@ -139,20 +139,20 @@ export default function ServicesPage() {
                 {/* Right: substrates + outputs */}
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px" }}>
                   <div>
-                    <p style={{ fontSize: "11px", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.12em", color: "rgba(255,255,255,0.3)", margin: "0 0 12px 0" }}>Substrates</p>
+                    <p style={{ fontSize: "11px", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.12em", color: "rgba(10,22,40,0.3)", margin: "0 0 12px 0" }}>Substrates</p>
                     <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "flex", flexDirection: "column", gap: "7px" }}>
                       {s.substrates.map((sub) => (
-                        <li key={sub} style={{ fontSize: "13px", color: "rgba(255,255,255,0.55)", display: "flex", alignItems: "flex-start", gap: "7px" }}>
+                        <li key={sub} style={{ fontSize: "13px", color: "rgba(10,22,40,0.55)", display: "flex", alignItems: "flex-start", gap: "7px" }}>
                           <span style={{ color: s.accent, flexShrink: 0 }}>–</span>{sub}
                         </li>
                       ))}
                     </ul>
                   </div>
                   <div>
-                    <p style={{ fontSize: "11px", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.12em", color: "rgba(255,255,255,0.3)", margin: "0 0 12px 0" }}>Common Uses</p>
+                    <p style={{ fontSize: "11px", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.12em", color: "rgba(10,22,40,0.3)", margin: "0 0 12px 0" }}>Common Uses</p>
                     <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "flex", flexDirection: "column", gap: "7px" }}>
                       {s.outputs.map((o) => (
-                        <li key={o} style={{ fontSize: "13px", color: "rgba(255,255,255,0.55)", display: "flex", alignItems: "flex-start", gap: "7px" }}>
+                        <li key={o} style={{ fontSize: "13px", color: "rgba(10,22,40,0.55)", display: "flex", alignItems: "flex-start", gap: "7px" }}>
                           <span style={{ color: s.accent, flexShrink: 0 }}>✓</span>{o}
                         </li>
                       ))}
@@ -168,15 +168,15 @@ export default function ServicesPage() {
       {/* Process */}
       <Reveal delayMs={80}>
         <section style={{ padding: "0 clamp(24px,4vw,48px) 80px", maxWidth: "1320px", margin: "0 auto" }}>
-          <h2 style={{ fontSize: "clamp(28px,4vw,48px)", fontWeight: 800, letterSpacing: "-0.025em", color: "#ffffff", margin: "0 0 40px 0" }}>
+          <h2 style={{ fontSize: "clamp(28px,4vw,48px)", fontWeight: 800, letterSpacing: "-0.025em", color: "#0a1628", margin: "0 0 40px 0" }}>
             How it works
           </h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "16px" }} className="process-grid">
             {process.map((p) => (
-              <div key={p.step} style={{ padding: "28px", borderRadius: "20px", background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.07)" }}>
-                <span style={{ fontSize: "32px", fontWeight: 900, color: "rgba(255,255,255,0.08)", letterSpacing: "-0.02em", display: "block", marginBottom: "12px", lineHeight: 1 }}>{p.step}</span>
-                <h3 style={{ fontSize: "16px", fontWeight: 700, color: "#ffffff", margin: "0 0 8px 0" }}>{p.title}</h3>
-                <p style={{ fontSize: "13px", color: "rgba(255,255,255,0.45)", lineHeight: 1.65, margin: 0 }}>{p.desc}</p>
+              <div key={p.step} style={{ padding: "28px", borderRadius: "20px", background: "rgba(255,255,255,0.55)", border: "1px solid rgba(0,0,0,0.07)" }}>
+                <span style={{ fontSize: "32px", fontWeight: 900, color: "rgba(10,22,40,0.08)", letterSpacing: "-0.02em", display: "block", marginBottom: "12px", lineHeight: 1 }}>{p.step}</span>
+                <h3 style={{ fontSize: "16px", fontWeight: 700, color: "#0a1628", margin: "0 0 8px 0" }}>{p.title}</h3>
+                <p style={{ fontSize: "13px", color: "rgba(10,22,40,0.45)", lineHeight: 1.65, margin: 0 }}>{p.desc}</p>
               </div>
             ))}
           </div>
@@ -186,20 +186,20 @@ export default function ServicesPage() {
       {/* CTA */}
       <Reveal delayMs={100}>
         <section style={{ padding: "0 clamp(24px,4vw,48px) 80px", maxWidth: "1320px", margin: "0 auto" }}>
-          <div style={{ borderRadius: "28px", padding: "clamp(40px,5vw,64px)", background: "linear-gradient(135deg,#0e0e1c,#111128,#0e0e1c)", border: "1px solid rgba(255,255,255,0.08)", textAlign: "center", position: "relative", overflow: "hidden" }}>
+          <div style={{ borderRadius: "28px", padding: "clamp(40px,5vw,64px)", background: "linear-gradient(135deg, rgba(255,255,255,0.8), rgba(220,255,255,0.7), rgba(255,255,255,0.8))", border: "1px solid rgba(0,0,0,0.08)", textAlign: "center", position: "relative", overflow: "hidden" }}>
             <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 60% 70% at 50% 50%,rgba(236,72,153,0.08),transparent 65%)", pointerEvents: "none" }} />
             <div style={{ position: "relative" }}>
-              <h2 style={{ fontSize: "clamp(28px,4vw,48px)", fontWeight: 800, letterSpacing: "-0.025em", color: "#ffffff", margin: "0 0 14px 0" }}>
+              <h2 style={{ fontSize: "clamp(28px,4vw,48px)", fontWeight: 800, letterSpacing: "-0.025em", color: "#0a1628", margin: "0 0 14px 0" }}>
                 Ready to start your project?
               </h2>
-              <p style={{ fontSize: "16px", color: "rgba(255,255,255,0.45)", maxWidth: "440px", margin: "0 auto 32px", lineHeight: 1.65 }}>
+              <p style={{ fontSize: "16px", color: "rgba(10,22,40,0.45)", maxWidth: "440px", margin: "0 auto 32px", lineHeight: 1.65 }}>
                 Get a detailed quote in 24 hours. No commitment required — just tell us what you need.
               </p>
               <div style={{ display: "flex", gap: "14px", justifyContent: "center", flexWrap: "wrap" }}>
                 <Link href="/quote" style={{ display: "inline-flex", alignItems: "center", gap: "8px", padding: "15px 28px", borderRadius: "9999px", background: "linear-gradient(135deg,#ec4899,#f97316)", color: "#ffffff", fontWeight: 700, fontSize: "15px", textDecoration: "none" }}>
                   Get a Free Quote →
                 </Link>
-                <Link href="/catalog" style={{ display: "inline-flex", alignItems: "center", gap: "8px", padding: "15px 24px", borderRadius: "9999px", background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.1)", color: "rgba(255,255,255,0.7)", fontWeight: 600, fontSize: "15px", textDecoration: "none" }}>
+                <Link href="/catalog" style={{ display: "inline-flex", alignItems: "center", gap: "8px", padding: "15px 24px", borderRadius: "9999px", background: "rgba(255,255,255,0.6)", border: "1px solid rgba(0,0,0,0.1)", color: "rgba(10,22,40,0.7)", fontWeight: 600, fontSize: "15px", textDecoration: "none" }}>
                   Browse Products
                 </Link>
               </div>

@@ -26,7 +26,7 @@ function SparkleIcon() {
     <svg width="14" height="14" viewBox="0 0 20 20" fill="none" style={{ display: "block", flexShrink: 0 }}>
       <path
         d="M10 2v3M10 15v3M2 10h3M15 10h3M4.22 4.22l2.12 2.12M13.66 13.66l2.12 2.12M4.22 15.78l2.12-2.12M13.66 6.34l2.12-2.12"
-        stroke="#E58CFF" strokeWidth="1.8" strokeLinecap="round"
+        stroke="#db2777" strokeWidth="1.8" strokeLinecap="round"
       />
     </svg>
   );
@@ -80,10 +80,10 @@ export default function QuotePage() {
     const isFocused = focused === name;
     const accent = FOCUS_COLORS[name];
     return {
-      background: "rgba(255,255,255,0.05)",
-      border: `1px solid ${isFocused ? accent.border : "rgba(255,255,255,0.07)"}`,
+      background: "rgba(255,255,255,0.55)",
+      border: `1px solid ${isFocused ? accent.border : "rgba(0,0,0,0.1)"}`,
       borderRadius: "18px",
-      color: "#ffffff",
+      color: "#0a1628",
       outline: "none",
       width: "100%",
       height: "56px",
@@ -101,7 +101,7 @@ export default function QuotePage() {
     fontWeight: 600,
     letterSpacing: "0.16em",
     textTransform: "uppercase",
-    color: "rgba(255,255,255,0.58)",
+    color: "rgba(10,22,40,0.58)",
     marginBottom: "8px",
   };
 
@@ -122,7 +122,9 @@ export default function QuotePage() {
           position: "relative",
           borderRadius: "40px",
           padding: "clamp(40px, 6vw, 80px)",
-          background: "linear-gradient(135deg, #2A093A 0%, #150A2B 40%, #091320 100%)",
+          background: "linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(220, 255, 255, 0.8) 100%)",
+          border: "1px solid rgba(0,0,0,0.08)",
+          boxShadow: "0 24px 64px rgba(0,0,0,0.06)",
           overflow: "hidden",
           display: "flex",
           gap: "clamp(40px, 6vw, 80px)",
@@ -158,7 +160,7 @@ export default function QuotePage() {
                 fontWeight: 600,
                 letterSpacing: "0.18em",
                 textTransform: "uppercase",
-                color: "#E58CFF",
+                color: "#db2777",
                 lineHeight: 1,
               }}
             >
@@ -173,7 +175,7 @@ export default function QuotePage() {
               fontWeight: 900,
               letterSpacing: "-0.03em",
               lineHeight: 1.05,
-              color: "#ffffff",
+              color: "#0a1628",
               margin: "0 0 24px 0",
             }}
           >
@@ -194,7 +196,7 @@ export default function QuotePage() {
           <p
             style={{
               fontSize: "18px",
-              color: "rgba(255,255,255,0.72)",
+              color: "rgba(10,22,40,0.72)",
               lineHeight: 1.65,
               margin: "0 0 40px 0",
               maxWidth: "420px",
@@ -209,7 +211,7 @@ export default function QuotePage() {
             {perks.map((p) => (
               <div key={p} style={{ display: "flex", alignItems: "center", gap: "12px" }}>
                 <CheckIcon />
-                <span style={{ fontSize: "17px", color: "rgba(255,255,255,0.82)", fontWeight: 500 }}>
+                <span style={{ fontSize: "17px", color: "rgba(10,22,40,0.82)", fontWeight: 500 }}>
                   {p}
                 </span>
               </div>
@@ -222,8 +224,8 @@ export default function QuotePage() {
           style={{
             flex: "1 1 480px",
             maxWidth: "620px",
-            background: "rgba(255,255,255,0.04)",
-            border: "1px solid rgba(255,255,255,0.08)",
+            background: "rgba(255,255,255,0.6)",
+            border: "1px solid rgba(0,0,0,0.08)",
             backdropFilter: "blur(18px)",
             WebkitBackdropFilter: "blur(18px)",
             borderRadius: "32px",
@@ -261,10 +263,10 @@ export default function QuotePage() {
                   <polyline points="20 6 9 17 4 12" />
                 </svg>
               </div>
-              <h3 style={{ fontSize: "22px", fontWeight: 800, color: "#ffffff", marginBottom: "10px", letterSpacing: "-0.02em" }}>
+              <h3 style={{ fontSize: "22px", fontWeight: 800, color: "#0a1628", marginBottom: "10px", letterSpacing: "-0.02em" }}>
                 Quote request sent!
               </h3>
-              <p style={{ fontSize: "15px", color: "rgba(255,255,255,0.5)", lineHeight: 1.6, maxWidth: "300px", margin: 0 }}>
+              <p style={{ fontSize: "15px", color: "rgba(10,22,40,0.5)", lineHeight: 1.6, maxWidth: "300px", margin: 0 }}>
                 We&apos;ll review your project and get back within 24 hours with pricing and paper suggestions.
               </p>
             </div>
@@ -334,7 +336,7 @@ export default function QuotePage() {
               )}
               {/* Footer: terms + CTA */}
               <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "16px", flexWrap: "wrap", marginTop: "4px" }}>
-                <p style={{ fontSize: "13px", color: "rgba(255,255,255,0.35)", margin: 0 }}>
+                <p style={{ fontSize: "13px", color: "rgba(10,22,40,0.35)", margin: 0 }}>
                   By submitting you agree to our friendly terms.
                 </p>
                 <button
@@ -348,8 +350,8 @@ export default function QuotePage() {
                     gap: "8px",
                     padding: "15px 32px",
                     borderRadius: "9999px",
-                    background: submitting ? "rgba(255,255,255,0.1)" : "linear-gradient(90deg, #FF4FD8, #FF5AA5)",
-                    color: submitting ? "rgba(255,255,255,0.4)" : "#ffffff",
+                    background: submitting ? "rgba(0,0,0,0.08)" : "linear-gradient(90deg, #FF4FD8, #FF5AA5)",
+                    color: submitting ? "rgba(10,22,40,0.4)" : "#ffffff",
                     fontWeight: 700,
                     fontSize: "15px",
                     letterSpacing: "0.01em",

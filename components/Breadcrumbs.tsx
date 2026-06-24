@@ -17,14 +17,14 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
         {items.map((item, i) => (
           <li key={i} style={{ display: "flex", alignItems: "center", gap: "6px" }}>
             {i > 0 && (
-              <span style={{ color: "rgba(255,255,255,0.2)", fontSize: "13px" }}>›</span>
+              <span style={{ color: "rgba(10,22,40,0.2)", fontSize: "13px" }}>›</span>
             )}
             {item.href ? (
               <Link href={item.href} className="breadcrumb-link" style={{ fontSize: "13px", color: "var(--text-muted)", textDecoration: "none", transition: "color 0.15s ease" }}>
                 {item.label}
               </Link>
             ) : (
-              <span style={{ fontSize: "13px", color: "rgba(255,255,255,0.65)", fontWeight: 500 }} aria-current="page">
+              <span style={{ fontSize: "13px", color: "rgba(10,22,40,0.65)", fontWeight: 500 }} aria-current="page">
                 {item.label}
               </span>
             )}

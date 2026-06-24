@@ -212,7 +212,7 @@ export default async function BlogPostDetailPage({ params }: Props) {
                   padding: "10px 22px",
                   borderRadius: "9999px",
                   background: "linear-gradient(135deg,#ec4899,#f97316)",
-                  color: "#ffffff",
+                  color: "#0a1628",
                   fontWeight: 700,
                   fontSize: "13px",
                   textDecoration: "none",

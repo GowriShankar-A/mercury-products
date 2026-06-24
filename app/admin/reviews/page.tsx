@@ -52,8 +52,8 @@ export default function AdminReviewsPage() {
   }
 
   const inputStyle: React.CSSProperties = {
-    background: "rgba(255,255,255,0.07)",
-    border: "1px solid rgba(255,255,255,0.12)",
+    background: "rgba(255,255,255,0.6)",
+    border: "1px solid rgba(0,0,0,0.12)",
     borderRadius: "10px",
     color: "white",
     padding: "11px 14px",
@@ -69,7 +69,7 @@ export default function AdminReviewsPage() {
         <input type="password" placeholder="Admin password" value={secret} onChange={(e) => setSecret(e.target.value)}
           onKeyDown={(e) => e.key === "Enter" && login()} style={inputStyle} />
         <button onClick={login} disabled={loading}
-          style={{ background: "linear-gradient(135deg,#22d3ee,#818cf8)", color: "#fff", border: "none", borderRadius: "9999px", padding: "11px 28px", fontWeight: 700, cursor: "pointer", fontSize: "14px" }}>
+          style={{ background: "linear-gradient(135deg,#22d3ee,#818cf8)", color: "#ffffff", border: "none", borderRadius: "9999px", padding: "11px 28px", fontWeight: 700, cursor: "pointer", fontSize: "14px" }}>
           {loading ? "Checking…" : "Login"}
         </button>
         {msg && <p style={{ color: "#FF4F79", fontSize: "13px" }}>{msg}</p>}
@@ -80,21 +80,21 @@ export default function AdminReviewsPage() {
   return (
     <div style={{ maxWidth: "760px", margin: "0 auto", padding: "48px 24px" }}>
       <h1 style={{ color: "white", fontSize: "26px", fontWeight: 800, marginBottom: "8px" }}>Pending Reviews</h1>
-      <p style={{ color: "rgba(255,255,255,0.4)", fontSize: "13px", marginBottom: "32px" }}>
+      <p style={{ color: "rgba(10,22,40,0.4)", fontSize: "13px", marginBottom: "32px" }}>
         Approve reviews to make them public. Delete spam.
       </p>
       {msg && <p style={{ color: "#22d3ee", fontSize: "13px", marginBottom: "16px" }}>{msg}</p>}
       {reviews.length === 0 ? (
-        <p style={{ color: "rgba(255,255,255,0.35)", fontSize: "14px" }}>No pending reviews 🎉</p>
+        <p style={{ color: "rgba(10,22,40,0.35)", fontSize: "14px" }}>No pending reviews 🎉</p>
       ) : (
         <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
           {reviews.map((r) => (
-            <div key={r.id} style={{ padding: "20px 22px", borderRadius: "16px", background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)" }}>
+            <div key={r.id} style={{ padding: "20px 22px", borderRadius: "16px", background: "rgba(255,255,255,0.6)", border: "1px solid rgba(0,0,0,0.08)" }}>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "8px" }}>
                 <div>
                   <span style={{ color: "white", fontWeight: 700, fontSize: "15px" }}>{r.name}</span>
                   <span style={{ marginLeft: "10px" }}><Stars rating={r.rating} /></span>
-                  <span style={{ marginLeft: "10px", color: "rgba(255,255,255,0.3)", fontSize: "11px" }}>{new Date(r.createdAt).toLocaleString("en-IN")}</span>
+                  <span style={{ marginLeft: "10px", color: "rgba(10,22,40,0.3)", fontSize: "11px" }}>{new Date(r.createdAt).toLocaleString("en-IN")}</span>
                 </div>
                 <div style={{ display: "flex", gap: "8px" }}>
                   <button onClick={() => handle("approve", r.id)}
@@ -107,7 +107,7 @@ export default function AdminReviewsPage() {
                   </button>
                 </div>
               </div>
-              <p style={{ margin: 0, color: "rgba(255,255,255,0.55)", fontSize: "13px", lineHeight: 1.65 }}>&ldquo;{r.message}&rdquo;</p>
+              <p style={{ margin: 0, color: "rgba(10,22,40,0.55)", fontSize: "13px", lineHeight: 1.65 }}>&ldquo;{r.message}&rdquo;</p>
             </div>
           ))}
         </div>

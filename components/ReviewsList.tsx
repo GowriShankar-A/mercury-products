@@ -33,7 +33,7 @@ export default async function ReviewsList() {
     return (
       <div style={{ textAlign: "center", padding: "32px 0" }}>
         <div style={{ fontSize: "36px", marginBottom: "10px" }}>✍️</div>
-        <p style={{ color: "rgba(255,255,255,0.35)", fontSize: "14px" }}>
+        <p style={{ color: "rgba(10,22,40,0.35)", fontSize: "14px" }}>
           No reviews yet — be the first to share your experience!
         </p>
       </div>
@@ -49,7 +49,7 @@ export default async function ReviewsList() {
         <span style={{ fontSize: "36px", fontWeight: 900, color: "#FBBF24", lineHeight: 1 }}>{avg}</span>
         <div>
           <Stars rating={Math.round(Number(avg))} />
-          <p style={{ margin: "4px 0 0", fontSize: "12px", color: "rgba(255,255,255,0.4)" }}>
+          <p style={{ margin: "4px 0 0", fontSize: "12px", color: "rgba(10,22,40,0.4)" }}>
             Based on {reviews.length} review{reviews.length !== 1 ? "s" : ""}
           </p>
         </div>
@@ -58,21 +58,21 @@ export default async function ReviewsList() {
       {/* Cards grid */}
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: "16px" }}>
         {reviews.map((r) => (
-          <div key={r.id} style={{ padding: "22px", borderRadius: "18px", background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.07)" }}>
+          <div key={r.id} style={{ padding: "22px", borderRadius: "18px", background: "rgba(255,255,255,0.55)", border: "1px solid rgba(0,0,0,0.07)" }}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "10px" }}>
               {/* Avatar + Name */}
               <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                <div style={{ width: "36px", height: "36px", borderRadius: "50%", background: "linear-gradient(135deg,#22d3ee,#818cf8)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "14px", fontWeight: 700, color: "#fff", flexShrink: 0 }}>
+                <div style={{ width: "36px", height: "36px", borderRadius: "50%", background: "linear-gradient(135deg,#22d3ee,#818cf8)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "14px", fontWeight: 700, color: "#ffffff", flexShrink: 0 }}>
                   {r.name.charAt(0).toUpperCase()}
                 </div>
                 <div>
-                  <p style={{ margin: 0, fontSize: "14px", fontWeight: 700, color: "#fff" }}>{r.name}</p>
-                  <p style={{ margin: 0, fontSize: "11px", color: "rgba(255,255,255,0.3)" }}>{timeAgo(r.createdAt)}</p>
+                  <p style={{ margin: 0, fontSize: "14px", fontWeight: 700, color: "#0a1628" }}>{r.name}</p>
+                  <p style={{ margin: 0, fontSize: "11px", color: "rgba(10,22,40,0.3)" }}>{timeAgo(r.createdAt)}</p>
                 </div>
               </div>
               <Stars rating={Number(r.rating)} />
             </div>
-            <p style={{ margin: 0, fontSize: "13px", color: "rgba(255,255,255,0.55)", lineHeight: 1.65 }}>
+            <p style={{ margin: 0, fontSize: "13px", color: "rgba(10,22,40,0.55)", lineHeight: 1.65 }}>
               &ldquo;{r.message}&rdquo;
             </p>
           </div>

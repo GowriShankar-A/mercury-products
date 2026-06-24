@@ -60,10 +60,10 @@ export default function ReviewForm() {
   }
 
   const inputStyle: React.CSSProperties = {
-    background: "rgba(255,255,255,0.05)",
-    border: "1px solid rgba(255,255,255,0.1)",
+    background: "rgba(255,255,255,0.55)",
+    border: "1px solid rgba(0,0,0,0.1)",
     borderRadius: "12px",
-    color: "white",
+    color: "#0a1628",
     outline: "none",
     width: "100%",
     padding: "13px 16px",
@@ -75,13 +75,13 @@ export default function ReviewForm() {
     return (
       <div style={{ textAlign: "center", padding: "32px 0" }}>
         <div style={{ fontSize: "42px", marginBottom: "12px" }}>🎉</div>
-        <h3 style={{ color: "#fff", fontWeight: 700, marginBottom: "8px" }}>Thank you for your review!</h3>
-        <p style={{ color: "rgba(255,255,255,0.45)", fontSize: "14px" }}>
+        <h3 style={{ color: "#0a1628", fontWeight: 700, marginBottom: "8px" }}>Thank you for your review!</h3>
+        <p style={{ color: "rgba(10,22,40,0.45)", fontSize: "14px" }}>
           Your review is under moderation and will appear here shortly.
         </p>
         <button
           onClick={() => setStatus("idle")}
-          style={{ marginTop: "16px", background: "none", border: "1px solid rgba(255,255,255,0.15)", color: "rgba(255,255,255,0.6)", borderRadius: "9999px", padding: "8px 20px", cursor: "pointer", fontSize: "13px" }}
+          style={{ marginTop: "16px", background: "none", border: "1px solid rgba(0,0,0,0.15)", color: "rgba(10,22,40,0.6)", borderRadius: "9999px", padding: "8px 20px", cursor: "pointer", fontSize: "13px" }}
         >
           Write another
         </button>
@@ -92,21 +92,21 @@ export default function ReviewForm() {
   return (
     <form ref={formRef} onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
       <div>
-        <label style={{ fontSize: "12px", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.1em", color: "rgba(255,255,255,0.35)", display: "block", marginBottom: "8px" }}>
+        <label style={{ fontSize: "12px", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.1em", color: "rgba(10,22,40,0.35)", display: "block", marginBottom: "8px" }}>
           Your Rating *
         </label>
         <StarPicker value={rating} onChange={setRating} />
       </div>
 
       <div>
-        <label style={{ fontSize: "12px", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.1em", color: "rgba(255,255,255,0.35)", display: "block", marginBottom: "6px" }}>
+        <label style={{ fontSize: "12px", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.1em", color: "rgba(10,22,40,0.35)", display: "block", marginBottom: "6px" }}>
           Your Name *
         </label>
         <input name="name" type="text" required placeholder="e.g. Rahul K." style={inputStyle} maxLength={60} />
       </div>
 
       <div>
-        <label style={{ fontSize: "12px", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.1em", color: "rgba(255,255,255,0.35)", display: "block", marginBottom: "6px" }}>
+        <label style={{ fontSize: "12px", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.1em", color: "rgba(10,22,40,0.35)", display: "block", marginBottom: "6px" }}>
           Your Review *
         </label>
         <textarea name="message" required placeholder="Tell us about your experience..." rows={4}

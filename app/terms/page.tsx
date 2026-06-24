@@ -11,8 +11,8 @@ export const metadata: Metadata = {
 export default function TermsPage() {
   return (
     <div style={{ maxWidth: "760px", margin: "0 auto", padding: "clamp(40px,6vw,80px) clamp(24px,4vw,48px) 100px" }}>
-      <h1 style={{ fontSize: "clamp(36px,5vw,56px)", fontWeight: 900, letterSpacing: "-0.03em", color: "#ffffff", margin: "0 0 8px 0" }}>Terms & Conditions</h1>
-      <p style={{ fontSize: "14px", color: "rgba(255,255,255,0.35)", marginBottom: "48px" }}>Last updated: 1 January 2026</p>
+      <h1 style={{ fontSize: "clamp(36px,5vw,56px)", fontWeight: 900, letterSpacing: "-0.03em", color: "#0a1628", margin: "0 0 8px 0" }}>Terms & Conditions</h1>
+      <p style={{ fontSize: "14px", color: "rgba(10,22,40,0.35)", marginBottom: "48px" }}>Last updated: 1 January 2026</p>
 
       {[
         {
@@ -61,8 +61,8 @@ export default function TermsPage() {
         },
       ].map((section) => (
         <div key={section.title} style={{ marginBottom: "32px" }}>
-          <h2 style={{ fontSize: "18px", fontWeight: 700, color: "#ffffff", margin: "0 0 10px 0" }}>{section.title}</h2>
-          <p style={{ fontSize: "14px", color: "rgba(255,255,255,0.55)", lineHeight: 1.75, margin: 0 }}>{section.body}</p>
+          <h2 style={{ fontSize: "18px", fontWeight: 700, color: "#0a1628", margin: "0 0 10px 0" }}>{section.title}</h2>
+          <p style={{ fontSize: "14px", color: "rgba(10,22,40,0.55)", lineHeight: 1.75, margin: 0 }}>{section.body}</p>
         </div>
       ))}
     </div>

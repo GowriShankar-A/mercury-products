@@ -162,7 +162,7 @@ export default function HomePage() {
 
               <div className="flex flex-wrap gap-3">
                 <Link href="/quote"
-                  className="gradient-btn flex items-center gap-2 text-sm font-semibold px-7 py-3.5 rounded-full text-white">
+                  className="gradient-btn flex items-center gap-2 text-sm font-semibold px-7 py-3.5 rounded-full text-[#0a1628]">
                   Start a Quote →
                 </Link>
                 <Link href="/catalog"
@@ -266,11 +266,11 @@ export default function HomePage() {
                         fontWeight: 700,
                         letterSpacing: "0.08em",
                         textTransform: "uppercase",
-                        color: "rgba(255,255,255,0.9)",
-                        background: "rgba(255,255,255,0.12)",
+                        color: "rgba(10,22,40,0.9)",
+                        background: "rgba(255,255,255,0.7)",
                         backdropFilter: "blur(8px)",
                         WebkitBackdropFilter: "blur(8px)",
-                        border: "1px solid rgba(255,255,255,0.15)",
+                        border: "1px solid rgba(0,0,0,0.15)",
                       }}
                     >
                       {p.badge}
@@ -302,7 +302,7 @@ export default function HomePage() {
                         fontWeight: 600,
                         letterSpacing: "0.12em",
                         textTransform: "uppercase",
-                        color: "rgba(255,255,255,0.52)",
+                        color: "rgba(10,22,40,0.52)",
                         marginBottom: "6px",
                       }}
                     >
@@ -312,7 +312,7 @@ export default function HomePage() {
                       style={{
                         fontSize: "18px",
                         fontWeight: 700,
-                        color: "#ffffff",
+                        color: "#0a1628",
                         lineHeight: 1.2,
                         letterSpacing: "-0.01em",
                       }}
@@ -355,8 +355,8 @@ export default function HomePage() {
           className="mb-20 overflow-hidden relative"
           style={{
             background: "#050508",
-            borderTop: "1px solid rgba(255,255,255,0.06)",
-            borderBottom: "1px solid rgba(255,255,255,0.06)",
+            borderTop: "1px solid rgba(0,0,0,0.06)",
+            borderBottom: "1px solid rgba(0,0,0,0.06)",
             minHeight: "72px",
             display: "flex",
             alignItems: "center",
@@ -406,7 +406,7 @@ export default function HomePage() {
                       display: "inline-block",
                       fontSize: "14px",
                       padding: "0 clamp(16px, 2.5vw, 24px)",
-                      color: "rgba(255,255,255,0.25)",
+                      color: "rgba(10,22,40,0.25)",
                       lineHeight: 1,
                     }}
                   >
@@ -443,7 +443,7 @@ export default function HomePage() {
 
             {/* Section header */}
             <div className="flex items-center gap-2 mb-5">
-              <span style={{ fontSize: "11px", fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", color: "rgba(255,255,255,0.32)" }}>
+              <span style={{ fontSize: "11px", fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", color: "rgba(10,22,40,0.32)" }}>
                 ⊙ WHAT WE PRESS
               </span>
             </div>
@@ -454,13 +454,13 @@ export default function HomePage() {
                   fontWeight: 700,
                   lineHeight: 1.05,
                   letterSpacing: "-0.025em",
-                  color: "#ffffff",
+                  color: "#0a1628",
                 }}
               >
                 A spectrum of{" "}
                 <span className="gradient-text-2">possibilities</span>.
               </h2>
-              <p style={{ fontSize: "15px", color: "rgba(255,255,255,0.45)", maxWidth: "320px", lineHeight: 1.6 }}>
+              <p style={{ fontSize: "15px", color: "rgba(10,22,40,0.45)", maxWidth: "320px", lineHeight: 1.6 }}>
                 Six core product families, hundreds of permutations. Pick a shape, a stock, a finish — we&apos;ll handle the rest.
               </p>
             </div>
@@ -703,7 +703,7 @@ export default function HomePage() {
                   </svg>
                   <p className="text-sm md:text-base text-text-muted leading-relaxed mb-6 transition-colors duration-355">&ldquo;{t.quote}&rdquo;</p>
                   <div className="flex items-center gap-3">
-                    <div className="w-9 h-9 rounded-full flex items-center justify-center text-xs font-bold text-white"
+                    <div className="w-9 h-9 rounded-full flex items-center justify-center text-xs font-bold text-[#0a1628]"
                       style={{ background: t.color }}>
                       {t.initials}
                     </div>
@@ -788,28 +788,28 @@ export default function HomePage() {
       <Reveal delayMs={260}>
         <section className="px-6 md:px-10 mb-16">
           <div className="max-w-6xl mx-auto rounded-3xl overflow-hidden relative"
-            style={{ background: "linear-gradient(135deg,#0d1f1a 0%,#0a1a14 100%)", border: "1px solid rgba(34,211,102,0.15)", padding: "clamp(36px,5vw,60px)" }}>
-            <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 60% 80% at 50% 50%,rgba(34,211,102,0.07),transparent 70%)", pointerEvents: "none" }} />
+            style={{ background: "rgba(34,211,102,0.12)", border: "1px solid rgba(34,211,102,0.25)", padding: "clamp(36px,5vw,60px)" }}>
+            <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 60% 80% at 50% 50%,rgba(34,211,102,0.04),transparent 70%)", pointerEvents: "none" }} />
             <div style={{ position: "relative", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: "28px" }}>
               <div>
                 <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "10px" }}>
                   <span style={{ fontSize: "22px" }}>⭐</span>
-                  <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: "rgba(34,211,102,0.7)" }}>CUSTOMER REVIEWS</span>
+                  <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: "#16a34a" }}>CUSTOMER REVIEWS</span>
                 </div>
-                <h2 style={{ fontSize: "clamp(22px,3vw,34px)", fontWeight: 800, color: "#fff", margin: "0 0 8px", letterSpacing: "-0.02em" }}>
+                <h2 style={{ fontSize: "clamp(22px,3vw,34px)", fontWeight: 800, color: "#0a1628", margin: "0 0 8px", letterSpacing: "-0.02em" }}>
                   Worked with us? Tell the world.
                 </h2>
-                <p style={{ fontSize: "14px", color: "rgba(255,255,255,0.45)", margin: 0, maxWidth: "420px", lineHeight: 1.65 }}>
+                <p style={{ fontSize: "14px", color: "rgba(10,22,40,0.65)", margin: 0, maxWidth: "420px", lineHeight: 1.65 }}>
                   Your feedback helps other businesses find quality printing. Takes just 60 seconds.
                 </p>
               </div>
               <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
                 <Link href="/reviews"
-                  style={{ display: "inline-flex", alignItems: "center", gap: "8px", padding: "14px 28px", borderRadius: "9999px", background: "rgba(34,211,102,0.15)", border: "1px solid rgba(34,211,102,0.35)", color: "#4ade80", fontWeight: 700, fontSize: "14px", textDecoration: "none" }}>
+                  style={{ display: "inline-flex", alignItems: "center", gap: "8px", padding: "14px 28px", borderRadius: "9999px", background: "#16a34a", color: "#ffffff", fontWeight: 700, fontSize: "14px", textDecoration: "none" }}>
                   Write a Review →
                 </Link>
                 <Link href="/reviews"
-                  style={{ display: "inline-flex", alignItems: "center", gap: "8px", padding: "14px 24px", borderRadius: "9999px", background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.09)", color: "rgba(255,255,255,0.55)", fontWeight: 600, fontSize: "14px", textDecoration: "none" }}>
+                  style={{ display: "inline-flex", alignItems: "center", gap: "8px", padding: "14px 24px", borderRadius: "9999px", background: "rgba(255,255,255,0.75)", border: "1px solid rgba(0,0,0,0.1)", color: "rgba(10,22,40,0.75)", fontWeight: 600, fontSize: "14px", textDecoration: "none" }}>
                   Read Reviews
                 </Link>
               </div>

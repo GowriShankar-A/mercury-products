@@ -163,7 +163,7 @@ export default function ShapesPage() {
             fontWeight: 900,
             letterSpacing: "-0.03em",
             lineHeight: 1.0,
-            color: "#ffffff",
+            color: "#0a1628",
             margin: 0,
           }}
         >
@@ -184,7 +184,7 @@ export default function ShapesPage() {
         <p
           style={{
             fontSize: "15px",
-            color: "rgba(255,255,255,0.45)",
+            color: "rgba(10,22,40,0.45)",
             maxWidth: "340px",
             lineHeight: 1.65,
             margin: 0,
@@ -258,8 +258,8 @@ export default function ShapesPage() {
       <div
         style={{
           borderRadius: "24px",
-          background: "rgba(255,255,255,0.03)",
-          border: "1px solid rgba(255,255,255,0.08)",
+          background: "rgba(255,255,255,0.55)",
+          border: "1px solid rgba(0,0,0,0.08)",
           padding: "clamp(24px, 3vw, 40px)",
           display: "flex",
           alignItems: "center",
@@ -296,7 +296,7 @@ export default function ShapesPage() {
                 style={{
                   fontSize: "20px",
                   fontWeight: 700,
-                  color: "#ffffff",
+                  color: "#0a1628",
                   letterSpacing: "-0.02em",
                   margin: 0,
                 }}
@@ -321,7 +321,7 @@ export default function ShapesPage() {
                 </span>
               )}
             </div>
-            <p style={{ fontSize: "14px", color: "rgba(255,255,255,0.5)", lineHeight: 1.6, margin: 0, maxWidth: "420px" }}>
+            <p style={{ fontSize: "14px", color: "rgba(10,22,40,0.5)", lineHeight: 1.6, margin: 0, maxWidth: "420px" }}>
               {active.desc}
             </p>
           </div>
@@ -330,7 +330,7 @@ export default function ShapesPage() {
         {/* Right — finishes + CTA */}
         <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: "14px", flexShrink: 0 }}>
           <div>
-            <p style={{ fontSize: "10px", fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", color: "rgba(255,255,255,0.3)", marginBottom: "9px" }}>
+            <p style={{ fontSize: "10px", fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", color: "rgba(10,22,40,0.3)", marginBottom: "9px" }}>
               AVAILABLE FINISHES
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "6px" }}>
@@ -342,9 +342,9 @@ export default function ShapesPage() {
                     fontWeight: 600,
                     padding: "4px 12px",
                     borderRadius: "9999px",
-                    color: "rgba(255,255,255,0.65)",
-                    background: "rgba(255,255,255,0.06)",
-                    border: "1px solid rgba(255,255,255,0.09)",
+                    color: "rgba(10,22,40,0.65)",
+                    background: "rgba(255,255,255,0.6)",
+                    border: "1px solid rgba(0,0,0,0.09)",
                   }}
                 >
                   {f}
@@ -380,8 +380,9 @@ export default function ShapesPage() {
           borderRadius: "28px",
           padding: "clamp(40px, 5vw, 64px)",
           textAlign: "center",
-          background: "linear-gradient(135deg, #0e0e1c 0%, #111128 50%, #0e0e1c 100%)",
-          border: "1px solid rgba(255,255,255,0.08)",
+          background: "rgba(255, 255, 255, 0.75)",
+          border: "1px solid rgba(0,0,0,0.08)",
+          boxShadow: "0 24px 64px rgba(0,0,0,0.06)",
           position: "relative",
           overflow: "hidden",
         }}
@@ -391,7 +392,7 @@ export default function ShapesPage() {
           style={{
             position: "absolute",
             inset: 0,
-            background: "radial-gradient(ellipse 60% 80% at 50% 50%, rgba(117,103,255,0.08), transparent 70%)",
+            background: "radial-gradient(ellipse 60% 80% at 50% 50%, rgba(117,103,255,0.03), transparent 70%)",
             pointerEvents: "none",
           }}
         />
@@ -400,7 +401,7 @@ export default function ShapesPage() {
             fontSize: "clamp(26px, 3.5vw, 40px)",
             fontWeight: 800,
             letterSpacing: "-0.025em",
-            color: "#ffffff",
+            color: "#0a1628",
             marginBottom: "16px",
             position: "relative",
           }}
@@ -410,7 +411,7 @@ export default function ShapesPage() {
         <p
           style={{
             fontSize: "15px",
-            color: "rgba(255,255,255,0.45)",
+            color: "rgba(10,22,40,0.45)",
             maxWidth: "420px",
             margin: "0 auto 32px",
             lineHeight: 1.65,

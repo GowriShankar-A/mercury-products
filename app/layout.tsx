@@ -118,7 +118,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
         />
       </head>
-      <body className="antialiased" style={{ background: "#05070d", color: "#fff" }}>
+      <body className="antialiased" style={{ background: "#00ffff", color: "#050508" }}>
         <div className="site-premium-bg">
           <div className="site-grid-overlay pointer-events-none" />
           <div className="site-vertical-bands pointer-events-none" />

@@ -34,17 +34,17 @@ export default function CookieConsent() {
         maxWidth: "420px",
         padding: "24px",
         borderRadius: "20px",
-        background: "rgba(18,18,28,0.96)",
+        background: "rgba(255,255,255,0.94)",
         backdropFilter: "blur(20px)",
         WebkitBackdropFilter: "blur(20px)",
-        border: "1px solid rgba(255,255,255,0.1)",
+        border: "1px solid rgba(0,0,0,0.1)",
         boxShadow: "0 24px 64px rgba(0,0,0,0.6)",
         animation: "slideUp 0.4s cubic-bezier(0.22,1,0.36,1)",
       }}
     >
-      <p style={{ fontSize: "14px", color: "rgba(255,255,255,0.72)", lineHeight: 1.6, margin: "0 0 16px 0" }}>
+      <p style={{ fontSize: "14px", color: "rgba(10,22,40,0.72)", lineHeight: 1.6, margin: "0 0 16px 0" }}>
         We use cookies to improve your experience and analyse site usage.{" "}
-        <Link href="/privacy" style={{ color: "rgba(255,255,255,0.5)", textDecoration: "underline" }}>
+        <Link href="/privacy" style={{ color: "rgba(10,22,40,0.5)", textDecoration: "underline" }}>
           Privacy Policy
         </Link>
       </p>
@@ -56,7 +56,7 @@ export default function CookieConsent() {
         </button>
         <button
           onClick={decline}
-          style={{ flex: 1, padding: "10px 16px", borderRadius: "9999px", background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.1)", color: "rgba(255,255,255,0.6)", fontWeight: 600, fontSize: "13px", cursor: "pointer" }}>
+          style={{ flex: 1, padding: "10px 16px", borderRadius: "9999px", background: "rgba(255,255,255,0.6)", border: "1px solid rgba(0,0,0,0.1)", color: "rgba(10,22,40,0.6)", fontWeight: 600, fontSize: "13px", cursor: "pointer" }}>
           Decline
         </button>
       </div>

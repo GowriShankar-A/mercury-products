@@ -92,16 +92,16 @@ export default function FAQPage() {
         <Reveal>
           <div style={{ marginBottom: "60px" }}>
             <div style={{ display: "inline-flex", alignItems: "center", gap: "8px", marginBottom: "20px" }}>
-              <span style={{ fontSize: "11px", fontWeight: 600, letterSpacing: "0.16em", textTransform: "uppercase", color: "rgba(255,255,255,0.32)" }}>⊙ FAQ</span>
+              <span style={{ fontSize: "11px", fontWeight: 600, letterSpacing: "0.16em", textTransform: "uppercase", color: "rgba(10,22,40,0.32)" }}>⊙ FAQ</span>
             </div>
-            <h1 style={{ fontSize: "clamp(40px,6vw,70px)", fontWeight: 900, letterSpacing: "-0.03em", lineHeight: 1.05, color: "#ffffff", margin: "0 0 18px 0" }}>
+            <h1 style={{ fontSize: "clamp(40px,6vw,70px)", fontWeight: 900, letterSpacing: "-0.03em", lineHeight: 1.05, color: "#0a1628", margin: "0 0 18px 0" }}>
               Questions,{" "}
               <span style={{ background: "linear-gradient(90deg,#22d3ee,#818cf8,#f472b6)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
                 answered.
               </span>
             </h1>
-            <p style={{ fontSize: "18px", color: "rgba(255,255,255,0.5)", lineHeight: 1.65, margin: 0 }}>
-              Everything you need to know about our UV printing services. Can't find your answer? <Link href="/contact" style={{ color: "rgba(255,255,255,0.7)", textDecoration: "underline" }}>Contact us directly.</Link>
+            <p style={{ fontSize: "18px", color: "rgba(10,22,40,0.5)", lineHeight: 1.65, margin: 0 }}>
+              Everything you need to know about our UV printing services. Can't find your answer? <Link href="/contact" style={{ color: "rgba(10,22,40,0.7)", textDecoration: "underline" }}>Contact us directly.</Link>
             </p>
           </div>
         </Reveal>
@@ -110,15 +110,15 @@ export default function FAQPage() {
         {faqs.map((cat, ci) => (
           <Reveal key={cat.category} delayMs={ci * 60}>
             <div style={{ marginBottom: "52px" }}>
-              <h2 style={{ fontSize: "13px", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.14em", color: "rgba(255,255,255,0.3)", margin: "0 0 16px 0" }}>{cat.category}</h2>
+              <h2 style={{ fontSize: "13px", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.14em", color: "rgba(10,22,40,0.3)", margin: "0 0 16px 0" }}>{cat.category}</h2>
               <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
                 {cat.items.map((item, i) => (
-                  <details key={i} className="faq-item" style={{ borderRadius: "16px", background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.07)", overflow: "hidden" }}>
-                    <summary style={{ padding: "18px 22px", fontSize: "15px", fontWeight: 600, color: "#ffffff", cursor: "pointer", listStyle: "none", display: "flex", justifyContent: "space-between", alignItems: "center", userSelect: "none" }}>
+                  <details key={i} className="faq-item" style={{ borderRadius: "16px", background: "rgba(255,255,255,0.55)", border: "1px solid rgba(0,0,0,0.07)", overflow: "hidden" }}>
+                    <summary style={{ padding: "18px 22px", fontSize: "15px", fontWeight: 600, color: "#0a1628", cursor: "pointer", listStyle: "none", display: "flex", justifyContent: "space-between", alignItems: "center", userSelect: "none" }}>
                       {item.q}
-                      <span className="faq-chevron" style={{ color: "rgba(255,255,255,0.3)", fontSize: "20px", flexShrink: 0, marginLeft: "16px", fontWeight: 300 }}>+</span>
+                      <span className="faq-chevron" style={{ color: "rgba(10,22,40,0.3)", fontSize: "20px", flexShrink: 0, marginLeft: "16px", fontWeight: 300 }}>+</span>
                     </summary>
-                    <div style={{ padding: "0 22px 20px", fontSize: "14px", color: "rgba(255,255,255,0.55)", lineHeight: 1.75 }}>
+                    <div style={{ padding: "0 22px 20px", fontSize: "14px", color: "rgba(10,22,40,0.55)", lineHeight: 1.75 }}>
                       {item.a}
                     </div>
                   </details>
@@ -130,16 +130,16 @@ export default function FAQPage() {
 
         {/* Contact CTA */}
         <Reveal delayMs={200}>
-          <div style={{ borderRadius: "24px", padding: "36px 40px", background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.07)", textAlign: "center" }}>
-            <h3 style={{ fontSize: "22px", fontWeight: 800, color: "#ffffff", margin: "0 0 10px 0" }}>Still have questions?</h3>
-            <p style={{ fontSize: "14px", color: "rgba(255,255,255,0.45)", margin: "0 0 24px 0", lineHeight: 1.6 }}>
+          <div style={{ borderRadius: "24px", padding: "36px 40px", background: "rgba(255,255,255,0.55)", border: "1px solid rgba(0,0,0,0.07)", textAlign: "center" }}>
+            <h3 style={{ fontSize: "22px", fontWeight: 800, color: "#0a1628", margin: "0 0 10px 0" }}>Still have questions?</h3>
+            <p style={{ fontSize: "14px", color: "rgba(10,22,40,0.45)", margin: "0 0 24px 0", lineHeight: 1.6 }}>
               Our team responds to every enquiry within 24 hours, Monday to Friday.
             </p>
             <div style={{ display: "flex", gap: "12px", justifyContent: "center", flexWrap: "wrap" }}>
               <Link href="/contact" style={{ display: "inline-flex", alignItems: "center", gap: "8px", padding: "13px 24px", borderRadius: "9999px", background: "linear-gradient(135deg,#ec4899,#f97316)", color: "#ffffff", fontWeight: 700, fontSize: "14px", textDecoration: "none" }}>
                 Contact Us →
               </Link>
-              <Link href="/quote" style={{ display: "inline-flex", alignItems: "center", gap: "8px", padding: "13px 22px", borderRadius: "9999px", background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.1)", color: "rgba(255,255,255,0.7)", fontWeight: 600, fontSize: "14px", textDecoration: "none" }}>
+              <Link href="/quote" style={{ display: "inline-flex", alignItems: "center", gap: "8px", padding: "13px 22px", borderRadius: "9999px", background: "rgba(255,255,255,0.6)", border: "1px solid rgba(0,0,0,0.1)", color: "rgba(10,22,40,0.7)", fontWeight: 600, fontSize: "14px", textDecoration: "none" }}>
                 Get a Quote
               </Link>
             </div>

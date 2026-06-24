@@ -87,21 +87,21 @@ export default async function TestimonialsPage() {
         <Reveal>
           <div style={{ textAlign: "center", marginBottom: "64px" }}>
             <div style={{ display: "inline-flex", alignItems: "center", gap: "8px", marginBottom: "20px" }}>
-              <span style={{ fontSize: "11px", fontWeight: 600, letterSpacing: "0.16em", textTransform: "uppercase", color: "rgba(255,255,255,0.32)" }}>★ CLIENT REVIEWS</span>
+              <span style={{ fontSize: "11px", fontWeight: 600, letterSpacing: "0.16em", textTransform: "uppercase", color: "rgba(10,22,40,0.32)" }}>★ CLIENT REVIEWS</span>
             </div>
-            <h1 style={{ fontSize: "clamp(40px,6vw,70px)", fontWeight: 900, letterSpacing: "-0.03em", lineHeight: 1.05, color: "#ffffff", margin: "0 0 18px 0" }}>
+            <h1 style={{ fontSize: "clamp(40px,6vw,70px)", fontWeight: 900, letterSpacing: "-0.03em", lineHeight: 1.05, color: "#0a1628", margin: "0 0 18px 0" }}>
               Brands that{" "}
               <span style={{ background: "linear-gradient(90deg,#22d3ee,#818cf8,#f472b6)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
                 trust us.
               </span>
             </h1>
             {/* Rating badge */}
-            <div style={{ display: "inline-flex", alignItems: "center", gap: "12px", padding: "12px 20px", borderRadius: "9999px", background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)" }}>
+            <div style={{ display: "inline-flex", alignItems: "center", gap: "12px", padding: "12px 20px", borderRadius: "9999px", background: "rgba(255,255,255,0.6)", border: "1px solid rgba(0,0,0,0.08)" }}>
               <div style={{ display: "flex", gap: "3px" }}>
                 {[...Array(5)].map((_, i) => <span key={i} style={{ color: "#fbbf24", fontSize: "16px" }}>★</span>)}
               </div>
-              <span style={{ fontSize: "14px", fontWeight: 700, color: "#ffffff" }}>4.9 / 5</span>
-              <span style={{ fontSize: "13px", color: "rgba(255,255,255,0.4)" }}>from {1200 + allTestimonials.length - 8}+ projects</span>
+              <span style={{ fontSize: "14px", fontWeight: 700, color: "#0a1628" }}>4.9 / 5</span>
+              <span style={{ fontSize: "13px", color: "rgba(10,22,40,0.4)" }}>from {1200 + allTestimonials.length - 8}+ projects</span>
             </div>
           </div>
         </Reveal>
@@ -110,14 +110,14 @@ export default async function TestimonialsPage() {
         <div style={{ display: "grid", gridTemplateColumns: "repeat(2,1fr)", gap: "20px", marginBottom: "64px" }} className="testimonials-grid">
           {allTestimonials.map((t, i) => (
             <Reveal key={`${t.name}-${i}`} delayMs={i * 40}>
-              <div style={{ padding: "32px", borderRadius: "24px", background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.07)", display: "flex", flexDirection: "column", gap: "20px", height: "100%" }}>
+              <div style={{ padding: "32px", borderRadius: "24px", background: "rgba(255,255,255,0.55)", border: "1px solid rgba(0,0,0,0.07)", display: "flex", flexDirection: "column", gap: "20px", height: "100%" }}>
                 {/* Stars */}
                 <div style={{ display: "flex", gap: "3px" }}>
                   {[...Array(t.rating)].map((_, i) => <span key={i} style={{ color: "#fbbf24", fontSize: "14px" }}>★</span>)}
                 </div>
 
                 {/* Quote */}
-                <p style={{ fontSize: "15px", color: "rgba(255,255,255,0.72)", lineHeight: 1.72, margin: 0, flex: 1 }}>
+                <p style={{ fontSize: "15px", color: "rgba(10,22,40,0.72)", lineHeight: 1.72, margin: 0, flex: 1 }}>
                   &ldquo;{t.quote}&rdquo;
                 </p>
 
@@ -132,8 +132,8 @@ export default async function TestimonialsPage() {
                     {t.initials}
                   </div>
                   <div>
-                    <p style={{ fontSize: "14px", fontWeight: 700, color: "#ffffff", margin: 0 }}>{t.name}</p>
-                    <p style={{ fontSize: "12px", color: "rgba(255,255,255,0.38)", margin: 0, marginTop: "2px" }}></p>
+                    <p style={{ fontSize: "14px", fontWeight: 700, color: "#0a1628", margin: 0 }}>{t.name}</p>
+                    <p style={{ fontSize: "12px", color: "rgba(10,22,40,0.38)", margin: 0, marginTop: "2px" }}></p>
                   </div>
                 </div>
               </div>
@@ -143,13 +143,13 @@ export default async function TestimonialsPage() {
 
         {/* CTA */}
         <Reveal delayMs={160}>
-          <div style={{ borderRadius: "24px", padding: "48px", background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.07)", textAlign: "center" }}>
-            <h2 style={{ fontSize: "28px", fontWeight: 800, color: "#ffffff", margin: "0 0 12px 0" }}>Join 1,200+ satisfied clients</h2>
-            <p style={{ fontSize: "15px", color: "rgba(255,255,255,0.45)", margin: "0 auto 28px", maxWidth: "400px", lineHeight: 1.6 }}>
+          <div style={{ borderRadius: "24px", padding: "48px", background: "rgba(255,255,255,0.55)", border: "1px solid rgba(0,0,0,0.07)", textAlign: "center" }}>
+            <h2 style={{ fontSize: "28px", fontWeight: 800, color: "#0a1628", margin: "0 0 12px 0" }}>Join 1,200+ satisfied clients</h2>
+            <p style={{ fontSize: "15px", color: "rgba(10,22,40,0.45)", margin: "0 auto 28px", maxWidth: "400px", lineHeight: 1.6 }}>
               Get a free, no-obligation quote for your next print project in 24 hours.
             </p>
             <div style={{ display: "flex", justifyContent: "center", gap: "16px" }}>
-              <Link href="/reviews" style={{ display: "inline-flex", alignItems: "center", gap: "8px", padding: "15px 28px", borderRadius: "9999px", background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)", color: "#ffffff", fontWeight: 700, fontSize: "15px", textDecoration: "none" }}>
+              <Link href="/reviews" style={{ display: "inline-flex", alignItems: "center", gap: "8px", padding: "15px 28px", borderRadius: "9999px", background: "rgba(255,255,255,0.55)", border: "1px solid rgba(0,0,0,0.1)", color: "#0a1628", fontWeight: 700, fontSize: "15px", textDecoration: "none" }}>
                 Write a Review →
               </Link>
               <Link href="/quote" style={{ display: "inline-flex", alignItems: "center", gap: "8px", padding: "15px 28px", borderRadius: "9999px", background: "linear-gradient(135deg,#ec4899,#f97316)", color: "#ffffff", fontWeight: 700, fontSize: "15px", textDecoration: "none" }}>

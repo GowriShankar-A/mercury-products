@@ -252,7 +252,7 @@ export default function Navbar() {
               </Link>
 
               <button className="md:hidden flex items-center justify-center"
-                style={{ width: "42px", height: "42px", borderRadius: "50%", background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)", color: "rgba(255,255,255,0.8)", cursor: "pointer", transition: "background 0.2s", flexShrink: 0 }}
+                style={{ width: "42px", height: "42px", borderRadius: "50%", background: "rgba(0,0,0,0.06)", border: "1px solid rgba(0,0,0,0.1)", color: "rgba(10,22,40,0.8)", cursor: "pointer", transition: "background 0.2s", flexShrink: 0 }}
                 onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
                   {menuOpen
@@ -267,7 +267,7 @@ export default function Navbar() {
 
           {/* Mobile dropdown */}
           <div className="md:hidden"
-            style={{ marginTop: "10px", borderRadius: "24px", background: "rgba(17,17,25,0.95)", backdropFilter: "blur(18px)", WebkitBackdropFilter: "blur(18px)", border: "1px solid rgba(255,255,255,0.09)", boxShadow: "0 8px 32px rgba(0,0,0,0.4)", overflow: "hidden", transition: "max-height 0.35s cubic-bezier(0.22,1,0.36,1),opacity 0.3s ease", maxHeight: menuOpen ? "600px" : "0px", opacity: menuOpen ? 1 : 0 }}>
+            style={{ marginTop: "10px", borderRadius: "24px", background: "rgba(255,255,255,0.92)", backdropFilter: "blur(18px)", WebkitBackdropFilter: "blur(18px)", border: "1px solid rgba(0,0,0,0.09)", boxShadow: "0 8px 32px rgba(0,0,0,0.12)", overflow: "hidden", transition: "max-height 0.35s cubic-bezier(0.22,1,0.36,1),opacity 0.3s ease", maxHeight: menuOpen ? "600px" : "0px", opacity: menuOpen ? 1 : 0 }}>
             <div style={{ padding: "20px 20px 24px" }}>
               {[
                 { label: "Products & Services", href: "/catalog" },
@@ -278,13 +278,13 @@ export default function Navbar() {
                 { label: "Contact", href: "/contact" },
               ].map((l, i, arr) => (
                 <Link key={l.href} href={l.href} onClick={() => setMenuOpen(false)}
-                  style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "13px 4px", fontSize: "16px", fontWeight: 500, color: pathname === l.href ? "rgba(255,255,255,1)" : "rgba(255,255,255,0.7)", textDecoration: "none", borderBottom: i < arr.length - 1 ? "1px solid rgba(255,255,255,0.06)" : "none" }}>
+                  style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "13px 4px", fontSize: "16px", fontWeight: 500, color: pathname === l.href ? "#0a1628" : "rgba(10,22,40,0.7)", textDecoration: "none", borderBottom: i < arr.length - 1 ? "1px solid rgba(0,0,0,0.08)" : "none" }}>
                   {l.label}
-                  <span style={{ color: "rgba(255,255,255,0.2)", fontSize: "14px" }}>›</span>
+                  <span style={{ color: "rgba(10,22,40,0.2)", fontSize: "14px" }}>›</span>
                 </Link>
               ))}
               <Link href="/quote" onClick={() => setMenuOpen(false)}
-                style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "8px", marginTop: "16px", height: "52px", borderRadius: "9999px", background: "#ffffff", color: "#000000", fontWeight: 700, fontSize: "15px", textDecoration: "none" }}>
+                style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "8px", marginTop: "16px", height: "52px", borderRadius: "9999px", background: "#0a1628", color: "#ffffff", fontWeight: 700, fontSize: "15px", textDecoration: "none" }}>
                 Get a Quote →
               </Link>
             </div>
